@@ -2,22 +2,31 @@
 
 [ext_resource type="Script" uid="uid://dqbrutyxxxs41" path="res://auto.gd" id="1_mmbrl"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_ryoya"]
+size = Vector3(1, 1, 2.0253906)
+
 [node name="Auto" type="CharacterBody3D" unique_id=19318106]
 motion_mode = 1
 script = ExtResource("1_mmbrl")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=6555951]
-size = Vector3(1, 1, 2.3183594)
+engine_power = 10.0
+braking_power = 20.0
+max_speed = 25.0
+max_speed_reverse = 15.0
+steering_speed = 1.5
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="." unique_id=1581217506]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.667791, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.946099, 0)
 remote_path = NodePath("../Node3D")
 update_rotation = false
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1927934595]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.667791, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.946099, 0)
 top_level = true
 
 [node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=957992906]
-transform = Transform3D(1, 0, 0, 0, 0.6211478, 0.78369343, 0, -0.78369343, 0.6211478, 0, 0, 8.533118)
-size = 6.607
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 14.41)
+projection = 1
+size = 16.887
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=524199039]
+mesh = SubResource("BoxMesh_ryoya")
