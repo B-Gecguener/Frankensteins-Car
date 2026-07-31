@@ -27,6 +27,10 @@ uv1_scale = Vector3(-1, 1, 1)
 material = SubResource("StandardMaterial3D_lfja4")
 size = Vector2(7.92, 8)
 
+[sub_resource type="Environment" id="Environment_ryoya"]
+background_color = Color(1, 0.8117647, 0.47058824, 1)
+background_energy_multiplier = 11.45
+
 [node name="Wüste" type="Node3D" unique_id=1567783565]
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1906484646]
@@ -34,9 +38,8 @@ transform = Transform3D(-1, -5.0143647e-08, -7.161255e-08, 0, 0.81915206, -0.573
 alpha_cut = 1
 texture = ExtResource("3_lfja4")
 
-[node name="Turret" parent="Sprite3D" unique_id=921670640 node_paths=PackedStringArray("car") instance=ExtResource("2_lfja4")]
+[node name="Turret" parent="Sprite3D" unique_id=921670640 instance=ExtResource("2_lfja4")]
 transform = Transform3D(-0.25, 6.348369e-09, 3.0922127e-08, -1.2535927e-08, 0.204788, -0.14339413, -2.8971199e-08, -0.14339413, -0.204788, -2.357909, 3.1948643, -1.4963646)
-car = NodePath("../../Auto")
 
 [node name="Sprite3D2" type="Sprite3D" parent="." unique_id=572198048]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 18.546951, 0.42860317, 20.239721)
@@ -57,6 +60,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.456951)
 transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, -0.6824547, 0)
 mesh = SubResource("QuadMesh_advl5")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1370950561]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 53.301445, 0)
-light_energy = 16.0
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=148520702]
+environment = SubResource("Environment_ryoya")
