@@ -9,6 +9,15 @@ script = ExtResource("1_mmbrl")
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=6555951]
 size = Vector3(1, 1, 2.3183594)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=957992906]
-transform = Transform3D(1, 0, 0, 0, 0.89271235, 0.45062697, 0, -0.45062697, 0.89271235, 0, 4.291904, 4.9271016)
+[node name="RemoteTransform3D" type="RemoteTransform3D" parent="." unique_id=1581217506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.667791, 0)
+remote_path = NodePath("../Node3D")
+update_rotation = false
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1927934595]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.667791, 0)
+top_level = true
+
+[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=957992906]
+transform = Transform3D(1, 0, 0, 0, 0.6211478, 0.78369343, 0, -0.78369343, 0.6211478, 0, 0, 8.533118)
 size = 6.607
