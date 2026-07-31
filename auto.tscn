@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ctoidtk3uxjdm"]
+
+[ext_resource type="Script" uid="uid://dqbrutyxxxs41" path="res://auto.gd" id="1_mmbrl"]
+
+[node name="Auto" type="CharacterBody3D" unique_id=19318106]
+motion_mode = 1
+script = ExtResource("1_mmbrl")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=6555951]
+size = Vector3(1, 1, 2.3183594)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=957992906]
+transform = Transform3D(1, 0, 0, 0, 0.89271235, 0.45062697, 0, -0.45062697, 0.89271235, 0, 4.291904, 4.9271016)
+projection = 1
+size = 6.607

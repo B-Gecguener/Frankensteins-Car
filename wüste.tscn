@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d4nkcgmjgirl5"]
+
+[ext_resource type="Texture2D" uid="uid://sjd6u3t8ri1y" path="res://icon.svg" id="1_ms8ol"]
+[ext_resource type="PackedScene" uid="uid://ctoidtk3uxjdm" path="res://auto.tscn" id="2_advl5"]
+
+[node name="Wüste" type="Node3D" unique_id=1567783565]
+
+[node name="Boden" type="Sprite3D" parent="." unique_id=886401118]
+transform = Transform3D(80, 0, 0, 0, -3.4969112e-06, -80, 0, 80, -3.4969112e-06, 0, 0, 0)
+texture_filter = 0
+texture = ExtResource("1_ms8ol")
+
+[node name="Auto" parent="." unique_id=19318106 instance=ExtResource("2_advl5")]
