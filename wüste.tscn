@@ -13,7 +13,7 @@ background_energy_multiplier = 11.45
 [node name="Wüste" type="Node3D" unique_id=1567783565]
 
 [node name="Boden" type="Sprite3D" parent="." unique_id=886401118]
-transform = Transform3D(-20, 3.019916e-06, -1.3200472e-13, 0, -8.742278e-07, -20, -3.019916e-06, -20, 8.742278e-07, 0, -0.4447918, 3.4884338)
+transform = Transform3D(-20, 3.019916e-06, -1.3200472e-13, 0, -8.742278e-07, -20, -3.019916e-06, -20, 8.742278e-07, 0.15107346, -0.4447956, 3.7238464)
 pixel_size = 0.005
 alpha_cut = 1
 texture_filter = 0
