@@ -4,9 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://b12eb0p0kxshs" path="res://HUD/HUD.tscn" id="2_wa6o6"]
 [ext_resource type="PackedScene" uid="uid://bo7rlg41sg4vi" path="res://Assets/Auto.glb" id="2_xpxoo"]
 [ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_cvfjh"]
+[ext_resource type="PackedScene" uid="uid://d15purwjs62uq" path="res://Assets/Waffe1.blend" id="4_waffe1"]
+[ext_resource type="Script" uid="uid://dvf8phwi81tvp" path="res://Assets/spielerWaffe.gd" id="5_waffe1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pqkk7"]
-radius = 0.8095703
+radius = 0.7026367
 height = 2.373993
 
 [node name="Auto" type="CharacterBody3D" unique_id=19318106]
@@ -38,6 +40,10 @@ transform = Transform3D(-6.5567085e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.556708
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=534746823]
 transform = Transform3D(0.725, 0, 0, 0, -3.1690757e-08, -0.725, 0, 0.725, -3.1690757e-08, 0, 0.26988697, 0.0003746152)
 shape = SubResource("CapsuleShape3D_pqkk7")
+
+[node name="Waffe1" parent="." unique_id=2049583721 instance=ExtResource("4_waffe1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.92411447, 0.17974225)
+script = ExtResource("5_waffe1")
 
 [node name="Hurtbox" parent="." unique_id=1244123534 instance=ExtResource("3_cvfjh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.26121598)
