@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4tqd8j4owvr1"
-path="res://.godot/imported/shield_car_028.png-37ea0ad6bb1bb69c1ecfdda4751053ea.ctex"
+uid="uid://0v77e8ye1ode"
+path="res://.godot/imported/Tankstelle_1.png-09ce74ce1ad5dd0690c72f5bb1cb221b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Shield/car/shield_car_028.png"
-dest_files=["res://.godot/imported/shield_car_028.png-37ea0ad6bb1bb69c1ecfdda4751053ea.ctex"]
+source_file="res://Assets/Tankstelle/Tankstelle_1.png"
+dest_files=["res://.godot/imported/Tankstelle_1.png-09ce74ce1ad5dd0690c72f5bb1cb221b.ctex"]
 
 [params]
 

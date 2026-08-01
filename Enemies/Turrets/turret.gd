@@ -35,7 +35,7 @@ func ruin_turret():
 	spawn_drops()
 
 func spawn_drops():
-	var batterie_amount: int = rng.randi_range(0,2)+1
+	var batterie_amount: int = rng.randi_range(0,1)+2
 	var scrap_amount: int = 4-batterie_amount
 	
 	var drop_dir: Vector3 = Vector3(1,0,0)
