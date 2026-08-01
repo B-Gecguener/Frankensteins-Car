@@ -1,7 +1,13 @@
 [gd_scene format=3 uid="uid://dl5n40o82y5w7"]
 
+[ext_resource type="Script" uid="uid://w5fu0le41wo" path="res://Enemies/Van/van_gun.gd" id="1_a08c6"]
 [ext_resource type="PackedScene" uid="uid://bm4nc24dtm12d" path="res://Assets/Waffe1.blend" id="1_wt86j"]
 
 [node name="van_gun" type="Node3D" unique_id=304275943]
+script = ExtResource("1_a08c6")
 
 [node name="Waffe1" parent="." unique_id=1312188166 instance=ExtResource("1_wt86j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Muzzle" type="Node3D" parent="Waffe1" unique_id=1332726208]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.80872166, 0.6349473, -4.05051)

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bjosybyu6hsgb" path="res://Enemies/Turrets/turret.tscn" id="2_lfja4"]
 [ext_resource type="PackedScene" uid="uid://cdjtmxvwxmyd6" path="res://Objects/pickup.tscn" id="5_q5aqq"]
 [ext_resource type="PackedScene" uid="uid://dpj4eult6r2dy" path="res://Objects/wall.tscn" id="5_xhd4d"]
+[ext_resource type="PackedScene" uid="uid://dpr4tsfvuqef5" path="res://Enemies/Van/Van.tscn" id="5_xhd4d"]
 
 [sub_resource type="Environment" id="Environment_ryoya"]
 background_color = Color(1, 0.8117647, 0.47058824, 1)
@@ -59,3 +60,6 @@ frame = 1
 
 [node name="Wall3" parent="." unique_id=663932136 instance=ExtResource("5_xhd4d")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 15.653766, 0, -19.178732)
+
+[node name="Van" parent="." unique_id=903574580 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -28.779787)
