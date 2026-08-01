@@ -5,6 +5,7 @@ class_name HurtBox
 var car_battery: float = 100.0
 
 signal died
+signal damaged
 signal health_changed(current: float, max: float)
 
 func use(amount: float) -> void:
@@ -22,6 +23,7 @@ func damage(dmg: float) -> void:
 	health_changed.emit(car_battery, max_car_battery)
 	if car_battery <= 0:
 		died.emit()
+	damaged.emit()
 
 func _ready() -> void:
 	car_battery = max_car_battery

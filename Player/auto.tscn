@@ -7,6 +7,140 @@
 [ext_resource type="PackedScene" uid="uid://bm4nc24dtm12d" path="res://Assets/Waffe1.blend" id="4_waffe1"]
 [ext_resource type="Script" uid="uid://dvf8phwi81tvp" path="res://Player/spielerWaffe.gd" id="5_waffe1"]
 [ext_resource type="PackedScene" uid="uid://d0iebkq8mebve" path="res://collection_area.tscn" id="7_syyyd"]
+[ext_resource type="Texture2D" uid="uid://cfttfmsq13bnp" path="res://Assets/Shield/car/shield_car_001.png" id="8_okxgn"]
+[ext_resource type="Texture2D" uid="uid://cvlqwtbah2rnt" path="res://Assets/Shield/car/shield_car_002.png" id="9_ak88d"]
+[ext_resource type="Texture2D" uid="uid://cx6cff03a7q8b" path="res://Assets/Shield/car/shield_car_003.png" id="10_0bx5e"]
+[ext_resource type="Texture2D" uid="uid://dxiukj1d81368" path="res://Assets/Shield/car/shield_car_004.png" id="11_dq0bv"]
+[ext_resource type="Texture2D" uid="uid://duenwoqup1oeh" path="res://Assets/Shield/car/shield_car_005.png" id="12_660ni"]
+[ext_resource type="Texture2D" uid="uid://bh41jlb60dg35" path="res://Assets/Shield/car/shield_car_006.png" id="13_ded0a"]
+[ext_resource type="Texture2D" uid="uid://ckcbc8bblckwq" path="res://Assets/Shield/car/shield_car_007.png" id="14_a5bm8"]
+[ext_resource type="Texture2D" uid="uid://ddaqgw7njvlqx" path="res://Assets/Shield/car/shield_car_008.png" id="15_jgcky"]
+[ext_resource type="Texture2D" uid="uid://dw5thqcnicrt5" path="res://Assets/Shield/car/shield_car_009.png" id="16_6gutg"]
+[ext_resource type="Texture2D" uid="uid://h58xnoudcr7o" path="res://Assets/Shield/car/shield_car_010.png" id="17_38fcq"]
+[ext_resource type="Texture2D" uid="uid://bgkh1qe7wd3dg" path="res://Assets/Shield/car/shield_car_011.png" id="18_bnhhl"]
+[ext_resource type="Texture2D" uid="uid://25pqhbakiti8" path="res://Assets/Shield/car/shield_car_012.png" id="19_7ytak"]
+[ext_resource type="Texture2D" uid="uid://bwna5c8cuk15n" path="res://Assets/Shield/car/shield_car_013.png" id="20_tj7u5"]
+[ext_resource type="Texture2D" uid="uid://boxtq0rjkukcg" path="res://Assets/Shield/car/shield_car_014.png" id="21_mbw18"]
+[ext_resource type="Texture2D" uid="uid://c3u3q5ddt3s0g" path="res://Assets/Shield/car/shield_car_015.png" id="22_v3gtu"]
+[ext_resource type="Texture2D" uid="uid://df1ow2kv1rio4" path="res://Assets/Shield/car/shield_car_016.png" id="23_gvu5q"]
+[ext_resource type="Texture2D" uid="uid://caxtvphs0tdms" path="res://Assets/Shield/car/shield_car_017.png" id="24_48ewc"]
+[ext_resource type="Texture2D" uid="uid://c6pmolka5jwwe" path="res://Assets/Shield/car/shield_car_018.png" id="25_wclpw"]
+[ext_resource type="Texture2D" uid="uid://c31fygjebkx20" path="res://Assets/Shield/car/shield_car_019.png" id="26_u56ie"]
+[ext_resource type="Texture2D" uid="uid://b22ga2uyokvfr" path="res://Assets/Shield/car/shield_car_020.png" id="27_7vk7l"]
+[ext_resource type="Texture2D" uid="uid://dvdmfrbb2hmj4" path="res://Assets/Shield/car/shield_car_021.png" id="28_ehq3d"]
+[ext_resource type="Texture2D" uid="uid://d3ey2xs6vksmt" path="res://Assets/Shield/car/shield_car_022.png" id="29_qi1uy"]
+[ext_resource type="Texture2D" uid="uid://bli2t163jituh" path="res://Assets/Shield/car/shield_car_023.png" id="30_6eys0"]
+[ext_resource type="Texture2D" uid="uid://bmrrrdxj2d2ug" path="res://Assets/Shield/car/shield_car_024.png" id="31_qc1w2"]
+[ext_resource type="Texture2D" uid="uid://dusrkq4ctawco" path="res://Assets/Shield/car/shield_car_025.png" id="32_sl1ew"]
+[ext_resource type="Texture2D" uid="uid://1aoh8j0ie6hm" path="res://Assets/Shield/car/shield_car_026.png" id="33_x3wpd"]
+[ext_resource type="Texture2D" uid="uid://dtwpp6y276iws" path="res://Assets/Shield/car/shield_car_027.png" id="34_r8h0p"]
+[ext_resource type="Texture2D" uid="uid://brotr2ye6r82x" path="res://Assets/Shield/car/shield_car_028.png" id="35_7o0ib"]
+[ext_resource type="Texture2D" uid="uid://vumyg7f185c8" path="res://Assets/Shield/car/shield_car_029.png" id="36_cfm7t"]
+[ext_resource type="Texture2D" uid="uid://cc020adhrw58r" path="res://Assets/Shield/car/shield_car_030.png" id="37_pwnov"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ryoya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_okxgn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ak88d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0bx5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_dq0bv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_660ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_ded0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_a5bm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_jgcky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_6gutg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_38fcq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_bnhhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7ytak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tj7u5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_mbw18")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_v3gtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_gvu5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_48ewc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_wclpw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_u56ie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_7vk7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ehq3d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qi1uy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_6eys0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_qc1w2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_sl1ew")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_x3wpd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_r8h0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_7o0ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_cfm7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_pwnov")
+}, {
+"duration": 24.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pqkk7"]
 radius = 0.7026367
@@ -34,6 +168,10 @@ top_level = true
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 23.92)
 projection = 1
 size = 16.887
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Node3D" unique_id=540100752]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -0.16, -21.33, 0.61)
+sprite_frames = SubResource("SpriteFrames_ryoya")
 
 [node name="Auto" parent="." unique_id=81091078 instance=ExtResource("2_xpxoo")]
 transform = Transform3D(-6.5567085e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.5567085e-09, 0, 0, -0.004219115)

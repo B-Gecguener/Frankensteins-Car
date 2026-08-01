@@ -15,13 +15,17 @@ class_name Player_1
 
 @onready var collection_area: CollectionArea = $CollectionArea
 @onready var hurtbox: HurtBox = $Hurtbox
+@onready var sprite: AnimatedSprite3D = $Node3D/AnimatedSprite3D
 
 var throttle := 0.0
 var car_battery = 100
 
 func _ready() -> void:
+	sprite.stop()
 	collection_area.scrap.connect(add_scrap)
 	collection_area.power.connect(add_power)
+	hurtbox.damaged.connect(sprite.stop)
+	hurtbox.damaged.connect(sprite.play.bind("default"))
 
 func add_scrap(amount: int):
 	scrap += amount
@@ -94,7 +98,7 @@ func _physics_process(delta):
 
 
 	# -----------------------------
-	# Reibung
+	# Reibung1.0
 	# -----------------------------
 
 	if throttle == 0.0:
