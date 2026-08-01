@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjosybyu6hsgb"]
 
-[ext_resource type="Texture2D" uid="uid://bwwtvv3p687ex" path="res://Assets/IMG_2600.png" id="1_t1pys"]
+[ext_resource type="Texture2D" uid="uid://cispwqwjicpah" path="res://Assets/Pillar.png" id="1_o1vxq"]
 [ext_resource type="PackedScene" uid="uid://bqwiiv2ouh05x" path="res://Enemies/cannon.tscn" id="2_o1vxq"]
 [ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_o1vxq"]
 
@@ -8,7 +8,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_t1pys")
+"texture": ExtResource("1_o1vxq")
 }],
 "loop": 1,
 "name": &"default",
@@ -22,11 +22,12 @@ radius = 0.9160156
 [node name="Turret" type="Node3D" unique_id=1454328288]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1195862395]
-transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -2.386, 1.635, 0)
+transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0.012, 1.635, 0.314)
+pixel_size = 0.011
 sprite_frames = SubResource("SpriteFrames_ryoya")
 
 [node name="Cannon" parent="." unique_id=921670640 instance=ExtResource("2_o1vxq")]
-transform = Transform3D(0.29, 0, 0, 0, 0.29, 0, 0, 0, 0.29, 0, 6.4, 0)
+transform = Transform3D(-0.29, 0, 2.5352605e-08, 0, 0.29, 0, -2.5352605e-08, 0, -0.29, 0, 6.4, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1004583579]
 
@@ -44,8 +45,6 @@ projection = 1
 size = 16.887
 
 [node name="Hurtbox" parent="." unique_id=1244123534 instance=ExtResource("3_o1vxq")]
-collision_layer = 2
-collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=1808666978]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10538745, 0.9975586, 0.2101388)
