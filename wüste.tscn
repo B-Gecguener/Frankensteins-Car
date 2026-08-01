@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://ctoidtk3uxjdm" path="res://Player/auto.tscn" id="2_advl5"]
 [ext_resource type="PackedScene" uid="uid://bjosybyu6hsgb" path="res://Enemies/Turrets/turret.tscn" id="2_lfja4"]
 [ext_resource type="PackedScene" uid="uid://cdjtmxvwxmyd6" path="res://Objects/pickup.tscn" id="5_q5aqq"]
-[ext_resource type="PackedScene" uid="uid://dpj4eult6r2dy" path="res://Objects/wall.tscn" id="5_xhd4d"]
 [ext_resource type="PackedScene" uid="uid://dpr4tsfvuqef5" path="res://Enemies/Van/Van.tscn" id="5_xhd4d"]
 
 [sub_resource type="Environment" id="Environment_ryoya"]
@@ -14,7 +13,7 @@ background_energy_multiplier = 11.45
 [node name="Wüste" type="Node3D" unique_id=1567783565]
 
 [node name="Boden" type="Sprite3D" parent="." unique_id=886401118]
-transform = Transform3D(-20, 3.019916e-06, -1.3200472e-13, 0, -8.742278e-07, -20, -3.019916e-06, -20, 8.742278e-07, 0, -0.4447918, 3.4884338)
+transform = Transform3D(-20, 3.019916e-06, -1.3200472e-13, 0, -8.742278e-07, -20, -3.019916e-06, -20, 8.742278e-07, 0.15107346, -0.4447956, 3.7238464)
 pixel_size = 0.005
 alpha_cut = 1
 texture_filter = 0
@@ -49,17 +48,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.243154, 3.8146973e-06, -4.
 
 [node name="Batterie3" parent="." unique_id=2065983184 instance=ExtResource("5_q5aqq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.934903, 3.8146973e-06, -5.313547)
-
-[node name="Wall" parent="." unique_id=1547815288 instance=ExtResource("5_xhd4d")]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -6.2945147, 0, -19.178732)
-frame = 2
-
-[node name="Wall2" parent="." unique_id=1266026371 instance=ExtResource("5_xhd4d")]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 4.6724043, 0, -19.178732)
-frame = 1
-
-[node name="Wall3" parent="." unique_id=663932136 instance=ExtResource("5_xhd4d")]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 15.653766, 0, -19.178732)
 
 [node name="Van" parent="." unique_id=903574580 instance=ExtResource("5_xhd4d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -28.779787)
