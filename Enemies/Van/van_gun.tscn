@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://n7d3qnnn1l3i"]
+
+[ext_resource type="PackedScene" uid="uid://bm4nc24dtm12d" path="res://Assets/Waffe1.blend" id="1_wt86j"]
+
+[node name="van_gun" type="Node3D" unique_id=304275943]
+
+[node name="Waffe1" parent="." unique_id=1312188166 instance=ExtResource("1_wt86j")]
