@@ -87,6 +87,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 func _on_area_3d_body_exited(body: Node3D) -> void:
 	for dect_body in detection_area.get_overlapping_bodies():
-		if dect_body is Player:
+		if dect_body is Player_1:
 			return
 	car = null
