@@ -13,7 +13,7 @@ var ruined: bool = false
 
 var velocity: Vector3 = Vector3(0,-1,0);
 
-# Called when the node enters the scene tree for the first time.
+# Called when the node edefault_2nters the scene tree for the first time.
 func _ready() -> void:
 	#explo_sprite.animation_finished.connect(ruin_turret)
 	hurtbox.died.connect(explode)

@@ -26,10 +26,21 @@ animations = [{
 "loop": 1,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_foy84")
+}],
+"loop": 1,
+"name": &"ruined",
+"speed": 5.0
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fhct8"]
+size = Vector3(2.3038788, 0.93152046, 1.2553711)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_ryoya"]
-size = Vector3(2.3038788, 3.176056, 1.2553711)
+size = Vector3(2.3038788, 1.1037602, 1.2553711)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wfelm"]
 animations = [{
@@ -89,23 +100,24 @@ animations = [{
 [node name="Van" type="Node3D" unique_id=1452757428]
 script = ExtResource("1_0sr5r")
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1478910900]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 1.208018, 0)
+[node name="TurretSprite" type="AnimatedSprite3D" parent="." unique_id=1478910900]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 1.1911789, 0)
 sprite_frames = SubResource("SpriteFrames_ryoya")
+animation = &"ruined"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=769924014]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=930531448]
-transform = Transform3D(0.9342128, 0, -0.35671628, 0, 1, 0, 0.35671628, 0, 0.9342128, -0.10264517, 0.8459778, 0.2174232)
-shape = SubResource("BoxShape3D_ryoya")
+transform = Transform3D(0.9342128, 0, -0.35671628, 0, 1, 0, 0.35671628, 0, 0.9342128, -0.10264517, 0.6283865, 0.2174232)
+shape = SubResource("BoxShape3D_fhct8")
 
-[node name="van_gun" parent="." unique_id=304275943 instance=ExtResource("3_fhct8")]
-transform = Transform3D(-0.27298838, 0, 0.124408014, 0, 0.3, 0, -0.124408014, 0, -0.27298838, 0.43, 1.887, 1.227)
+[node name="Cannon" parent="." unique_id=304275943 instance=ExtResource("3_fhct8")]
+transform = Transform3D(-0.27298838, 0, 0.124408014, 0, 0.3, 0, -0.124408014, 0, -0.27298838, 0.42999977, 1.1620425, 0.46445847)
 
 [node name="Hurtbox" parent="." unique_id=1244123534 instance=ExtResource("16_c5pap")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=1439566691]
-transform = Transform3D(0.9342128, 0, -0.35671628, 0, 1, 0, 0.35671628, 0, 0.9342128, 0.03786173, 1.088028, 0.13439666)
+transform = Transform3D(0.9342128, 0, -0.35671628, 0, 1, 0, 0.35671628, 0, 0.9342128, 0.03786173, 0.6732199, 0.13439666)
 shape = SubResource("BoxShape3D_ryoya")
 
 [node name="ExplosionSprite" type="AnimatedSprite3D" parent="." unique_id=680245345]
@@ -113,12 +125,3 @@ transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.8
 pixel_size = 0.011
 sprite_frames = SubResource("SpriteFrames_wfelm")
 animation = &"explosion"
-
-[node name="Node3D" type="Node3D" parent="." unique_id=1158063263]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.946099, 0)
-top_level = true
-
-[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1300973003]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 7.745)
-projection = 1
-size = 16.887

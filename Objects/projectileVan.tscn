@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d0b2w5qnv6gkd"]
+
+[ext_resource type="Script" uid="uid://i6x6n4tvvcg6" path="res://Objects/projectile.gd" id="1_gpk8d"]
+[ext_resource type="PackedScene" uid="uid://bsm6tbahb0c5" path="res://Enemies/hit_box.tscn" id="2_o184r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v73ce"]
+albedo_color = Color(0.31061712, 0.31061712, 0.3106171, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ryoya"]
+material = SubResource("StandardMaterial3D_v73ce")
+radial_segments = 6
+rings = 3
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mdlbx"]
+height = 6.331543
+
+[node name="Projectile" type="Node3D" unique_id=1298098876]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+top_level = true
+script = ExtResource("1_gpk8d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=913271144]
+mesh = SubResource("SphereMesh_ryoya")
+
+[node name="HitBox" parent="." unique_id=469772956 instance=ExtResource("2_o184r")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" unique_id=1404704840]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, -2.8416579, 0)
+shape = SubResource("CapsuleShape3D_mdlbx")
+debug_fill = false
+
+[connection signal="hit" from="HitBox" to="." method="_on_hit_box_hit"]
