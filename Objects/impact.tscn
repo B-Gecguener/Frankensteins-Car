@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dbo78vkswmsy6"]
+
+[ext_resource type="Texture2D" uid="uid://cf8cdr5xmnqjm" path="res://Assets/bullets/bullet hits/bullet hit001.png" id="1_72akq"]
+[ext_resource type="Texture2D" uid="uid://dt0lwdpffmmrm" path="res://Assets/bullets/bullet hits/bullet hit002.png" id="2_c076m"]
+[ext_resource type="Texture2D" uid="uid://dmeknp42lhtn2" path="res://Assets/bullets/bullet hits/bullet hit003.png" id="3_gf1qi"]
+[ext_resource type="Texture2D" uid="uid://cf44cj5rcwpfo" path="res://Assets/bullets/bullet hits/bullet hit004.png" id="4_uiq6c"]
+[ext_resource type="Texture2D" uid="uid://bhuuqgi6xm6om" path="res://Assets/bullets/bullet hits/bullet hit005.png" id="5_oiiof"]
+[ext_resource type="Texture2D" uid="uid://vtllutfgqbr5" path="res://Assets/bullets/bullet hits/bullet hit006.png" id="6_xyj5i"]
+[ext_resource type="Texture2D" uid="uid://si0qdlkwm34r" path="res://Assets/bullets/bullet hits/bullet hit007.png" id="7_mgtbo"]
+[ext_resource type="Texture2D" uid="uid://m8dbboiqmubu" path="res://Assets/bullets/bullet hits/bullet hit008.png" id="8_5a7et"]
+[ext_resource type="Texture2D" uid="uid://b170s46fl6ua2" path="res://Assets/bullets/bullet hits/bullet hit009.png" id="9_24xfi"]
+[ext_resource type="Texture2D" uid="uid://bsoorwwn1q7h2" path="res://Assets/bullets/bullet hits/bullet hit010.png" id="10_d4g7w"]
+[ext_resource type="Texture2D" uid="uid://1n18qm7o3oto" path="res://Assets/bullets/bullet hits/bullet hit011.png" id="11_fnqpr"]
+[ext_resource type="Texture2D" uid="uid://35f5tnvvm5i2" path="res://Assets/bullets/bullet hits/bullet hit012.png" id="12_icnfa"]
+[ext_resource type="Texture2D" uid="uid://ngbgjc8ygyc5" path="res://Assets/bullets/bullet hits/bullet hit013.png" id="13_m44o2"]
+[ext_resource type="Texture2D" uid="uid://fjr1e68ehirf" path="res://Assets/bullets/bullet hits/bullet hit014.png" id="14_2lrde"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqkk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_72akq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_c076m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gf1qi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uiq6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oiiof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xyj5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mgtbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5a7et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_24xfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_d4g7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_fnqpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_icnfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_m44o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2lrde")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}]
+
+[node name="Impact" type="Node3D" unique_id=1646464250]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1558330903]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -0.06, 0.933, -0.172)
+sprite_frames = SubResource("SpriteFrames_pqkk7")
+autoplay = "default"

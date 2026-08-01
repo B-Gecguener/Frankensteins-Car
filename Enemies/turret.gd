@@ -16,7 +16,7 @@ var velocity: Vector3 = Vector3(0,-1,0);
 func _ready() -> void:
 	explo_sprite.animation_finished.connect(ruin_turret)
 	hurtbox.died.connect(explode)
-	get_tree().create_timer(3.0).timeout.connect(explode)
+	#get_tree().create_timer(3.0).timeout.connect(explode)
 
 
 func explode():
