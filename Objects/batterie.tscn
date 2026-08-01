@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cdjtmxvwxmyd6"]
+
+[ext_resource type="Script" uid="uid://lucg0dwrybc4" path="res://Objects/batterie.gd" id="1_pxaap"]
+[ext_resource type="Texture2D" uid="uid://dlt65oh5vr2bb" path="res://Assets/Batterie.png" id="2_q6eu3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ryoya"]
+radius = 15.031271
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ryoya"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q6eu3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Batterie" type="Area3D" unique_id=53947675]
+script = ExtResource("1_pxaap")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1101549671]
+shape = SubResource("SphereShape3D_ryoya")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=998692107]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0.76894426, 0)
+sprite_frames = SubResource("SpriteFrames_ryoya")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
