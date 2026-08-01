@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ctoidtk3uxjdm"]
 
 [ext_resource type="Script" uid="uid://dqbrutyxxxs41" path="res://Player/auto.gd" id="1_mmbrl"]
+[ext_resource type="PackedScene" uid="uid://b12eb0p0kxshs" path="res://HUD/HUD.tscn" id="2_wa6o6"]
+[ext_resource type="PackedScene" uid="uid://bo7rlg41sg4vi" path="res://Assets/Auto.glb" id="2_xpxoo"]
 [ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_cvfjh"]
 [ext_resource type="PackedScene" uid="uid://c1tgoag1trp6i" path="res://Player/AutoStylized.blend" id="3_wa6o6"]
 [ext_resource type="PackedScene" uid="uid://d15purwjs62uq" path="res://Player/Waffe1.blend" id="4_wa6o6"]
@@ -10,12 +12,13 @@ radius = 0.7128906
 height = 2.291748
 
 [node name="Auto" type="CharacterBody3D" unique_id=19318106]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.12036383, 0.3454648)
 motion_mode = 1
 script = ExtResource("1_mmbrl")
 braking_power = 20.0
 max_speed = 50.0
 steering_speed = 1.9
+
+[node name="Hud" parent="." unique_id=240368453 instance=ExtResource("2_wa6o6")]
 
 [node name="RemoteTransform3D" type="RemoteTransform3D" parent="." unique_id=1581217506]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.766, 0)
@@ -23,7 +26,7 @@ remote_path = NodePath("../Node3D")
 update_rotation = false
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1927934595]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.645638, 0.3454648)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.766, 0)
 top_level = true
 
 [node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=957992906]

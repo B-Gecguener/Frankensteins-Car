@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://b12eb0p0kxshs"]
+
+[ext_resource type="Script" uid="uid://dxvcadf40qnsa" path="res://HUD/hud.gd" id="1_f31rt"]
+
+[node name="Hud" type="CanvasLayer" unique_id=240368453]
+script = ExtResource("1_f31rt")
+
+[node name="Control" type="Control" parent="." unique_id=968942746]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=101904174]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="energy_progressbar" type="ProgressBar" parent="Control" unique_id=894754043]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.25
+offset_top = -58.0
+offset_right = 90.25
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+step = 0.1
+
+[node name="scrap_label" type="Label" parent="Control" unique_id=388734657]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -204.0
+offset_top = -56.0
+offset_right = -116.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0 Scrap"
+horizontal_alignment = 1

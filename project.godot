@@ -25,6 +25,7 @@ window/stretch/aspect="expand"
 folder_colors={
 "res://Assets/": "blue",
 "res://Enemies/": "red",
+"res://HUD/": "gray",
 "res://Player/": "green"
 }
 

@@ -81,7 +81,7 @@ func _target_pitch(point: Vector3) -> float:
 	return atan2(local.y, Vector2(local.x, local.z).length())
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body is Player:
+	if body is Player_1:
 		car = body
 
 
