@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lgsixwi02ken"
-path.s3tc="res://.godot/imported/Waffe1_DefaultMaterial_Normal.png.png-3453ee6a2cddb44cffb1029f13955105.s3tc.ctex"
+uid="uid://vuwly5dgtrm0"
+path.s3tc="res://.godot/imported/AutoStylized_Material_BaseColor.png.png-5a33b8c1a654b8cfd2529e4fbfc3a679.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "489b37a882d688227ec3db5242d86e30"
+"md5": "c65c03fd292ef3f5f88b45207574d0f6"
 }
 
 [deps]
 
-source_file="res://Player/Waffe1_DefaultMaterial_Normal.png.png"
-dest_files=["res://.godot/imported/Waffe1_DefaultMaterial_Normal.png.png-3453ee6a2cddb44cffb1029f13955105.s3tc.ctex"]
+source_file="res://Assets/AutoStylized_Material_BaseColor.png.png"
+dest_files=["res://.godot/imported/AutoStylized_Material_BaseColor.png.png-5a33b8c1a654b8cfd2529e4fbfc3a679.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Player/Waffe1_DefaultMaterial_Normal.png.png"
+roughness/mode=0
+roughness/src_normal=""
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

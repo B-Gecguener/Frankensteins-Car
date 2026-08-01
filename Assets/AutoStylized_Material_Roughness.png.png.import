@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fkhvggui21yy"
-path.s3tc="res://.godot/imported/Waffe1_DefaultMaterial_BaseColor.png.png-492931c1ce7c4aef540ed67c511fc187.s3tc.ctex"
+uid="uid://c8mu7e2ejptgo"
+path.s3tc="res://.godot/imported/AutoStylized_Material_Roughness.png.png-077ed46d65955cde09129c531d0982e0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "3835661fe1ec82e596b9b148d1d566e9"
+"md5": "723d899b7d4d07baa12ad41dc4ed7acc"
 }
 
 [deps]
 
-source_file="res://Player/Waffe1_DefaultMaterial_BaseColor.png.png"
-dest_files=["res://.godot/imported/Waffe1_DefaultMaterial_BaseColor.png.png-492931c1ce7c4aef540ed67c511fc187.s3tc.ctex"]
+source_file="res://Assets/AutoStylized_Material_Roughness.png.png"
+dest_files=["res://.godot/imported/AutoStylized_Material_Roughness.png.png-077ed46d65955cde09129c531d0982e0.s3tc.ctex"]
 
 [params]
 
