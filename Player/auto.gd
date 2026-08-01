@@ -24,8 +24,9 @@ func _physics_process(delta):
 
 	throttle = 0.0
 
-	if Input.is_action_pressed("accelerate"):
-		throttle = 1.0
+	var gas := Input.get_action_strength("accelerate")   # analog on L2, digital (1.0) on W
+	if gas > 0.0:
+		throttle = gas
 	elif Input.is_action_pressed("decelerate"):
 		throttle = -1.0
 
