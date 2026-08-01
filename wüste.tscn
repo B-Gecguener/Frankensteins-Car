@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bjosybyu6hsgb" path="res://Enemies/Turrets/turret.tscn" id="2_lfja4"]
 [ext_resource type="PackedScene" uid="uid://cdjtmxvwxmyd6" path="res://Objects/pickup.tscn" id="5_q5aqq"]
 [ext_resource type="PackedScene" uid="uid://dpj4eult6r2dy" path="res://Objects/wall.tscn" id="5_xhd4d"]
+[ext_resource type="PackedScene" uid="uid://bey1u5ucdp7nk" path="res://Objects/tankstelle.tscn" id="6_xhd4d"]
 
 [sub_resource type="Environment" id="Environment_ryoya"]
 background_color = Color(1, 0.8117647, 0.47058824, 1)
@@ -13,21 +14,21 @@ background_energy_multiplier = 11.45
 [node name="Wüste" type="Node3D" unique_id=1567783565]
 
 [node name="Boden" type="Sprite3D" parent="." unique_id=886401118]
-transform = Transform3D(-20, 3.019916e-06, -1.3200472e-13, 0, -8.742278e-07, -20, -3.019916e-06, -20, 8.742278e-07, 0.15107346, -0.4447956, 3.7238464)
+transform = Transform3D(-20, 3.019916e-06, -1.3200472e-13, 0, -8.742278e-07, -20, -3.019916e-06, -20, 8.742278e-07, 0.17673874, -0.44491768, 3.717865)
 pixel_size = 0.005
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("2_7fbdt")
 
 [node name="Auto" parent="." unique_id=19318106 instance=ExtResource("2_advl5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17846274, 23.49017)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17846274, 33.076645)
 max_speed = 90.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=148520702]
 environment = SubResource("Environment_ryoya")
 
 [node name="Turret" parent="." unique_id=1454328288 instance=ExtResource("2_lfja4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.010185, 0, 9.023007)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.57159, 0, 1.537683)
 
 [node name="Turret2" parent="." unique_id=1768601208 instance=ExtResource("2_lfja4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.720415, 0, -7.738641)
@@ -87,3 +88,6 @@ frame = 1
 [node name="Wall10" parent="Wall" unique_id=109859210 instance=ExtResource("5_xhd4d")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -7.548213, 0, -17.293167)
 frame = 2
+
+[node name="Tankstelle" parent="." unique_id=1874023473 instance=ExtResource("6_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.5735764, 0, -0.5735764, 0.81915206, 0, 2.112915, 18.413208)

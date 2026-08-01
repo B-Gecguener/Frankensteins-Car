@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bey1u5ucdp7nk"]
+
+[ext_resource type="Texture2D" uid="uid://c4fmdd4cthhvr" path="res://Assets/Tankstelle/tankstelle_oben.png" id="1_jmw45"]
+[ext_resource type="Texture2D" uid="uid://evl2eda1b6r6" path="res://Assets/Tankstelle/tankstelle_unten.png" id="2_l6dyh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_67f0n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_jmw45")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wadkj"]
+size = Vector3(1.5443115, 1.8510132, 1.0415955)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_snbu8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_l6dyh")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tankstelle" type="AnimatedSprite3D" unique_id=1874023473]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 0)
+sprite_frames = SubResource("SpriteFrames_67f0n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=280035319]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2068436102]
+transform = Transform3D(2.1280506, 0.008956134, -2.11455, -1.2128668, 2.4626048, -1.2101806, 1.7321533, 1.7133315, 1.7504696, 1.1283872, 1.0069926, -1.5598354)
+shape = SubResource("BoxShape3D_wadkj")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1714452928]
+sprite_frames = SubResource("SpriteFrames_snbu8")
