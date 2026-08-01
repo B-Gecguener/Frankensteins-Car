@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://b12eb0p0kxshs" path="res://HUD/HUD.tscn" id="2_wa6o6"]
 [ext_resource type="PackedScene" uid="uid://bo7rlg41sg4vi" path="res://Assets/Auto.glb" id="2_xpxoo"]
 [ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_cvfjh"]
+[ext_resource type="PackedScene" uid="uid://c1tgoag1trp6i" path="res://Player/AutoStylized.blend" id="3_wa6o6"]
+[ext_resource type="PackedScene" uid="uid://d15purwjs62uq" path="res://Player/Waffe1.blend" id="4_wa6o6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pqkk7"]
 radius = 0.7026367
@@ -32,9 +34,12 @@ transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81
 projection = 1
 size = 16.887
 
+<<<<<<< HEAD
 [node name="Auto" parent="." unique_id=81091078 instance=ExtResource("2_xpxoo")]
 transform = Transform3D(-6.5567085e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.5567085e-09, 0, 0, -0.5213631)
 
+=======
+>>>>>>> 6d754c7a5cbef1be631faffd66a0f25d7b8fc646
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=534746823]
 transform = Transform3D(0.725, 0, 0, 0, -3.1690757e-08, -0.725, 0, 0.725, -3.1690757e-08, 0, 0.26988697, 0.0003746152)
 shape = SubResource("CapsuleShape3D_pqkk7")
@@ -45,3 +50,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.26121598)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=1210024052]
 transform = Transform3D(0.725, 0, 0, 0, -3.1690757e-08, -0.725, 0, 0.725, -3.1690757e-08, -0.0022307038, 0.21028978, -0.23771784)
 shape = SubResource("CapsuleShape3D_pqkk7")
+
+[node name="AutoStylized" parent="." unique_id=1316777138 instance=ExtResource("3_wa6o6")]
+transform = Transform3D(-6.5567085e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.5567085e-09, 0, 0.09173167, -0.81750154)
+
+[node name="Waffe1" parent="." unique_id=1504636609 instance=ExtResource("4_wa6o6")]
+transform = Transform3D(-4.6348228e-07, -0.00026179882, 0.14999978, 0.00026179882, 0.14999953, 0.0002617993, -0.14999975, 0.00026179926, -6.556699e-09, -0.004468739, 0.935612, -0.13210881)

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dyoa380ej5ljk"
-path="res://.godot/imported/cannon.blend-bb155d719f69b212055d61421c721e71.scn"
+uid="uid://c1tgoag1trp6i"
+path="res://.godot/imported/AutoStylized.blend-a6cd33a281479fb962c31ac29cbd0c56.scn"
 
 [deps]
 
-source_file="res://Assets/cannon.blend"
-dest_files=["res://.godot/imported/cannon.blend-bb155d719f69b212055d61421c721e71.scn"]
+source_file="res://Player/AutoStylized.blend"
+dest_files=["res://.godot/imported/AutoStylized.blend-a6cd33a281479fb962c31ac29cbd0c56.scn"]
 
 [params]
 
