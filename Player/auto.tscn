@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dqbrutyxxxs41" path="res://Player/auto.gd" id="1_mmbrl"]
 [ext_resource type="PackedScene" uid="uid://b12eb0p0kxshs" path="res://HUD/HUD.tscn" id="2_wa6o6"]
-[ext_resource type="PackedScene" uid="uid://c1tgoag1trp6i" path="res://Assets/AutoStylized.blend" id="2_xpxoo"]
+[ext_resource type="PackedScene" uid="uid://djjxnly4fgt11" path="res://Assets/AutoStylized.blend" id="2_xpxoo"]
 [ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_cvfjh"]
 [ext_resource type="PackedScene" uid="uid://bm4nc24dtm12d" path="res://Assets/Waffe1.blend" id="4_waffe1"]
 [ext_resource type="Script" uid="uid://dvf8phwi81tvp" path="res://Player/spielerWaffe.gd" id="5_waffe1"]
@@ -36,18 +36,18 @@ projection = 1
 size = 16.887
 
 [node name="Auto" parent="." unique_id=81091078 instance=ExtResource("2_xpxoo")]
-transform = Transform3D(-6.5567085e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.5567085e-09, 0, 0, -0.5213631)
+transform = Transform3D(-6.5567085e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.5567085e-09, 0, 0, -0.004219115)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=534746823]
-transform = Transform3D(0.725, 0, 0, 0, -3.1690757e-08, -0.725, 0, 0.725, -3.1690757e-08, 0, 0.26988697, 0.0003746152)
+transform = Transform3D(0.725, 0, 0, 0, -3.1690757e-08, -0.725, 0, 0.725, -3.1690757e-08, 0, 0.19730544, 0.0003746152)
 shape = SubResource("CapsuleShape3D_pqkk7")
 
 [node name="Waffe1" parent="." unique_id=2049583721 instance=ExtResource("4_waffe1")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.7070434, 0.17974225)
+transform = Transform3D(-8.742278e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.742278e-09, 0, 0.5391985, 0.16613308)
 script = ExtResource("5_waffe1")
 
 [node name="Hurtbox" parent="." unique_id=1244123534 instance=ExtResource("3_cvfjh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.26121598)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.20224339)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=1210024052]
 transform = Transform3D(0.725, 0, 0, 0, -3.1690757e-08, -0.725, 0, 0.725, -3.1690757e-08, -0.0022307038, 0.21028978, -0.23771784)

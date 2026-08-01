@@ -26,7 +26,7 @@ texture_filter = 0
 texture = ExtResource("2_7fbdt")
 
 [node name="Auto" parent="." unique_id=19318106 instance=ExtResource("2_advl5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.3054428, 19.456951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17846274, 19.456951)
 max_speed = 90.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=148520702]
