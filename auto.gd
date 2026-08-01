@@ -11,11 +11,11 @@ class_name Player
 @export var friction := 10.0
 @export var drag := 0.15
 
-@export var max_car_battery := 100
+@export var car_battery := 100
 @export var scrap := 0
 
 var throttle := 0.0
-var car_battery = 100
+
 
 func _physics_process(delta):
 
