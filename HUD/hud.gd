@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var auto: Player = $"../Auto"
+@onready var auto: Player_1 = $".."
 @onready var scrap_label: Label = $Control/scrap_label
 
 @onready var energy_health: ProgressBar = $Control/energy_progressbar

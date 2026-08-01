@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://ctoidtk3uxjdm" path="res://Player/auto.tscn" id="2_advl5"]
 [ext_resource type="PackedScene" uid="uid://bjosybyu6hsgb" path="res://Enemies/turret.tscn" id="2_lfja4"]
 [ext_resource type="Texture2D" uid="uid://bwwtvv3p687ex" path="res://Assets/IMG_2600.png" id="3_lfja4"]
-[ext_resource type="PackedScene" uid="uid://b12eb0p0kxshs" path="res://HUD/HUD.tscn" id="4_7fbdt"]
 
 [sub_resource type="Gradient" id="Gradient_xhd4d"]
 colors = PackedColorArray(0.4962803, 0.21944582, 4.813075e-08, 1, 0.9, 0.4344, 0.026999973, 1)

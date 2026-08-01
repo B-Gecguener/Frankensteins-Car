@@ -1,5 +1,5 @@
 extends CharacterBody3D
-class_name Player
+class_name Player_1
 
 @export var engine_power := 5.0
 @export var braking_power := 45.0
