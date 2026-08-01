@@ -1,20 +1,25 @@
 extends Node3D
 
-## Sits on the car (Waffe1 mesh). Turns left/right on its own Y axis
-## using the right stick, independent of the car's own heading.
+## Points the turret exactly where the right stick is pointing - a full
+## 360-degree match to the stick's angle, not a turn rate. Independent of
+## the car's own heading, since this node just rotates on its own Y axis.
 
-@export var turn_speed: float = 3.0        # rad/s, max traverse speed at full stick deflection
-@export var turn_acceleration: float = 12.0 # rad/s^2, how fast it ramps up/slows down
-@export var invert: bool = false            # flip this if the turret turns the wrong way
+@export var joy_deadzone: float = 0.2
+@export var invert_x: bool = false   # flip if left/right feels backwards
+@export var invert_y: bool = false   # flip if up/down feels backwards
 
-var current_speed: float = 0.0
+func _physics_process(_delta: float) -> void:
+	var stick := Input.get_vector("turret_left", "turret_right", "turret_up", "turret_down", joy_deadzone)
 
-func _physics_process(delta: float) -> void:
-	var aim := Input.get_axis("turret_left", "turret_right")
-	if invert:
-		aim = -aim
+	# Stick centered: hold the last direction instead of snapping back to 0.
+	if stick.length_squared() < 0.0001:
+		return
 
-	var target_speed := aim * turn_speed
-	current_speed = move_toward(current_speed, target_speed, turn_acceleration * delta)
+	if invert_x:
+		stick.x = -stick.x
+	if invert_y:
+		stick.y = -stick.y
 
-	rotation.y -= current_speed * delta
+	# stick.x: right stick horizontal (right = +1)
+	# stick.y: right stick vertical (down = +1, matches raw joypad axis convention)
+	rotation.y = atan2(-stick.x, -stick.y)
