@@ -97,6 +97,9 @@ animations = [{
 "speed": 24.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": null
+}, {
 "duration": 2.0,
 "texture": ExtResource("11_q0744")
 }, {
@@ -130,8 +133,11 @@ animations = [{
 "duration": 3.0,
 "texture": ExtResource("21_4p7og")
 }, {
-"duration": 3.0,
+"duration": 8.0,
 "texture": ExtResource("22_q1wts")
+}, {
+"duration": 1.0,
+"texture": null
 }],
 "loop": 0,
 "name": &"explosion",
@@ -176,4 +182,4 @@ shape = SubResource("CylinderShape3D_pqkk7")
 transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0.012, 9.783, 6.284)
 pixel_size = 0.011
 sprite_frames = SubResource("SpriteFrames_d14fb")
-autoplay = "default"
+animation = &"explosion"
