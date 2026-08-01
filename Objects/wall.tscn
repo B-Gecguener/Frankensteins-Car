@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ryoya"]
-size = Vector3(11.243164, 4.584961, 1)
+size = Vector3(11.243164, 5.5426636, 1)
 
 [node name="Wall" type="AnimatedSprite3D" unique_id=1547815288]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 0)
@@ -50,5 +50,5 @@ sprite_frames = SubResource("SpriteFrames_pqkk7")
 transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 5.959079, 1.3452492, 0.06997883)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=299975949]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7924805, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.787628, -0.1967628)
 shape = SubResource("BoxShape3D_ryoya")
