@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 		inpact()
 
 func _on_hit_box_hit() -> void:
-	inpact()
+	queue_free()
 
 func inpact():
 	var impact: Node3D = impact_ani.instantiate()

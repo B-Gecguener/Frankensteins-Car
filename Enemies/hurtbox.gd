@@ -7,6 +7,12 @@ var car_battery: float = 100.0
 signal died
 signal health_changed(current: float, max: float)
 
+func use(amount: float) -> void:
+	car_battery -= amount
+	health_changed.emit(car_battery, max_car_battery)
+	if car_battery <= 0:
+		died.emit()
+
 func heal(amount: float) -> void:
 	car_battery = min(max_car_battery, car_battery+amount)
 	health_changed.emit(car_battery, max_car_battery)
