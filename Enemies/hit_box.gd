@@ -1,7 +1,7 @@
 extends Area3D
 class_name HitBox
 
-var damage: float = 10.0
+@export var damage: float = 3.0
 var shooter: HurtBox = null   # whoever fired this shot - ignored so a shot can't hit its own shooter
 signal hit
 
