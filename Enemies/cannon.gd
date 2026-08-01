@@ -1,0 +1,92 @@
+extends Node3D
+
+@export var car: CharacterBody3D
+@export var turret: Node3D   # yaws around Y
+@export var cannon: Node3D   # pitches around X, child of turret
+
+@onready var detection_area: Area3D = $Area3D
+@onready var muzzle: Node3D = $turret/cannon/Muzzle
+
+var projectile: PackedScene = load("res://Enemies/projectile.tscn")
+
+@export_group("Aiming")
+@export var max_yaw_speed: float = 7       # rad/s, top traverse speed
+@export var max_pitch_speed: float = 0.8
+@export var yaw_accel: float = 10            # rad/sÂ², lower = more momentum
+@export var pitch_accel: float = 3
+@export var tracking_gain: float = 4.0        # how aggressively it closes the error
+
+var yaw_speed: float = 0.0
+var pitch_speed: float = 0.0
+var target: Vector3 = Vector3.ZERO
+
+var loaded: bool = true
+
+var rng: RandomNumberGenerator = RandomNumberGenerator.new()
+var randomness: Vector3 = Vector3(rng.randf_range(0.0,8.0),0,rng.randf_range(0.0,8.0))
+
+func _ready() -> void:
+	_recalc_randomness()
+
+func _recalc_randomness() -> void:
+	get_tree().create_timer(1.0,false,true,false).timeout.connect(_recalc_randomness)
+	randomness = Vector3(rng.randf_range(0.0,8.0),0,rng.randf_range(0.0,8.0))
+
+func _physics_process(delta: float) -> void:
+	var desired_yaw_speed: float = 0.0
+	var desired_pitch_speed: float = 0.0
+
+	if car:
+		var speed: float = car.velocity.length()*delta
+		var vorhalt: Vector3 = (-car.transform.basis.z) * speed * global_position.distance_to(car.global_position) *3
+		
+		var target = car.global_position + vorhalt + (randomness * speed)
+
+		var yaw_error: float = angle_difference(turret.rotation.y, _target_yaw(target))
+		var pitch_error: float = angle_difference(cannon.rotation.x, _target_pitch(target))
+
+		desired_yaw_speed = clampf(yaw_error * tracking_gain, -max_yaw_speed, max_yaw_speed)
+		desired_pitch_speed = clampf(pitch_error * tracking_gain, -max_pitch_speed, max_pitch_speed)
+		if loaded:
+				fire()
+				
+	# momentum: angular velocity can only change at a limited rate
+	yaw_speed = move_toward(yaw_speed, desired_yaw_speed, yaw_accel * delta)
+	pitch_speed = move_toward(pitch_speed, desired_pitch_speed, pitch_accel * delta)
+
+	turret.rotation.y = wrapf(turret.rotation.y + yaw_speed * delta, -PI, PI)
+
+	var new_pitch: float = cannon.rotation.x + pitch_speed * delta
+	cannon.rotation.x = new_pitch
+
+func fire() -> void:
+	var bullet: Projectile = projectile.instantiate()
+	add_child(bullet)
+	bullet.flight_vector = (muzzle.global_position - cannon.global_position).normalized()
+	bullet.global_position = muzzle.global_position
+	loaded = false
+	get_tree().create_timer(0.5).timeout.connect(reload)
+
+func reload() -> void:
+	loaded = true
+
+func _target_yaw(point: Vector3) -> float:
+	# convert into the turret's parent space so the mount's own rotation is accounted for
+	var local: Vector3 = turret.get_parent().to_local(point)
+	return atan2(-local.x, -local.z)
+
+
+func _target_pitch(point: Vector3) -> float:
+	var local: Vector3 = cannon.get_parent().to_local(point)
+	return atan2(local.y, Vector2(local.x, local.z).length())
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body is Player:
+		car = body
+
+
+func _on_area_3d_body_exited(body: Node3D) -> void:
+	for dect_body in detection_area.get_overlapping_bodies():
+		if dect_body is Player:
+			return
+	car = null

@@ -5,7 +5,7 @@ class_name Player
 @export var braking_power := 45.0
 
 @export var max_speed := 18.0
-@export var max_speed_reverse := 8.0
+@export var max_speed_reverse := 10.0
 
 @export var steering_speed := 0.7     # Wie schnell das Auto lenkt
 @export var friction := 10.0
