@@ -10,6 +10,8 @@ extends CharacterBody3D
 @export var friction := 10.0
 @export var drag := 0.15
 
+@export var car_battery := 100
+
 var throttle := 0.0
 
 
