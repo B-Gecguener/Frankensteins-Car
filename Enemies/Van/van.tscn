@@ -1,7 +1,21 @@
 [gd_scene format=3 uid="uid://dpr4tsfvuqef5"]
 
-[ext_resource type="Script" uid="uid://dmrmcdluex2cm" path="res://Enemies/Turrets/turret.gd" id="1_e0fqo"]
-[ext_resource type="Texture2D" uid="uid://b4wkvnfugwatl" path="res://Assets/Enemy/Van_Enemy.png" id="2_foy84"]
+[ext_resource type="Script" uid="uid://ds5o5ecp3w2tx" path="res://Enemies/Van/van.gd" id="1_0sr5r"]
+[ext_resource type="Texture2D" uid="uid://bq2ht3qhi22tw" path="res://Assets/Enemy/vanenemy.png" id="2_foy84"]
+[ext_resource type="PackedScene" uid="uid://n7d3qnnn1l3i" path="res://Enemies/Van/van_gun.tscn" id="3_ybk2j"]
+[ext_resource type="Texture2D" uid="uid://8vr2f7bywqa4" path="res://Assets/pillar animations/Pillar_explosion_001.png" id="5_c5pap"]
+[ext_resource type="Texture2D" uid="uid://wlu3fcijygwu" path="res://Assets/pillar animations/Pillar_explosion_003.png" id="6_1bfma"]
+[ext_resource type="Texture2D" uid="uid://ct35ebagq0qrr" path="res://Assets/pillar animations/Pillar_explosion_005.png" id="7_x0eae"]
+[ext_resource type="Texture2D" uid="uid://spdv41v51kdb" path="res://Assets/pillar animations/Pillar_explosion_008.png" id="8_ap2fr"]
+[ext_resource type="Texture2D" uid="uid://bch3tsyldfevo" path="res://Assets/pillar animations/Pillar_explosion_010.png" id="9_rrfi6"]
+[ext_resource type="Texture2D" uid="uid://viwen2ugl4io" path="res://Assets/pillar animations/Pillar_explosion_012.png" id="10_ehmt0"]
+[ext_resource type="Texture2D" uid="uid://utf40tt6bh4o" path="res://Assets/pillar animations/Pillar_explosion_014.png" id="11_x5pb0"]
+[ext_resource type="Texture2D" uid="uid://bdqo83ts0ju8w" path="res://Assets/pillar animations/Pillar_explosion_016.png" id="12_ijk7r"]
+[ext_resource type="Texture2D" uid="uid://m2tojdarodvl" path="res://Assets/pillar animations/Pillar_explosion_018.png" id="13_1bmu6"]
+[ext_resource type="Texture2D" uid="uid://cbn446sdh1jyp" path="res://Assets/pillar animations/Pillar_explosion_021.png" id="14_wklfy"]
+[ext_resource type="Texture2D" uid="uid://bbfo8rims5hyc" path="res://Assets/pillar animations/Pillar_explosion_025.png" id="15_xxcnm"]
+[ext_resource type="Texture2D" uid="uid://x6ru4mwbh16x" path="res://Assets/pillar animations/Pillar_explosion_028.png" id="16_7kyuv"]
+[ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="16_c5pap"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_67f0n"]
 animations = [{
@@ -15,9 +29,68 @@ animations = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_foy84"]
+size = Vector3(1.4077759, 0.9350586, 1)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y2qk8"]
+animations = [{
+"frames": [],
+"loop": 0,
+"name": &"default",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_c5pap")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_1bfma")
+}, {
+"duration": 3.0,
+"texture": ExtResource("7_x0eae")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_ap2fr")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_rrfi6")
+}, {
+"duration": 2.0,
+"texture": ExtResource("10_ehmt0")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_x5pb0")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_ijk7r")
+}, {
+"duration": 3.0,
+"texture": ExtResource("13_1bmu6")
+}, {
+"duration": 4.0,
+"texture": ExtResource("14_wklfy")
+}, {
+"duration": 3.0,
+"texture": ExtResource("15_xxcnm")
+}, {
+"duration": 8.0,
+"texture": ExtResource("16_7kyuv")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"explosion",
+"speed": 24.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0sr5r"]
+size = Vector3(1.3886719, 1, 0.76464844)
 
 [node name="Van" type="Node3D" unique_id=903574580]
-script = ExtResource("1_e0fqo")
+script = ExtResource("1_0sr5r")
 metadata/_custom_type_script = "uid://dmrmcdluex2cm"
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=354530664]
@@ -27,4 +100,21 @@ sprite_frames = SubResource("SpriteFrames_67f0n")
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1694997392]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=420376650]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.016296387, -0.064941406, 0)
+visible = false
 shape = SubResource("BoxShape3D_foy84")
+
+[node name="van_gun" parent="." unique_id=304275943 instance=ExtResource("3_ybk2j")]
+transform = Transform3D(0.16270131, 0, 0.18981119, 0, 0.25, 0, -0.18981119, 0, 0.16270131, 0.45443094, 0.77783203, 0.6458664)
+
+[node name="ExplosionSprite" type="AnimatedSprite3D" parent="." unique_id=660528140]
+transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0.012, 9.783, 6.284)
+pixel_size = 0.011
+sprite_frames = SubResource("SpriteFrames_y2qk8")
+animation = &"explosion"
+
+[node name="Hurtbox" parent="." unique_id=1244123534 instance=ExtResource("16_c5pap")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=796628642]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.046875, 0, 0.15527344)
+shape = SubResource("BoxShape3D_0sr5r")

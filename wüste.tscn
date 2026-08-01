@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ctoidtk3uxjdm" path="res://Player/auto.tscn" id="2_advl5"]
 [ext_resource type="PackedScene" uid="uid://bjosybyu6hsgb" path="res://Enemies/Turrets/turret.tscn" id="2_lfja4"]
 [ext_resource type="PackedScene" uid="uid://cdjtmxvwxmyd6" path="res://Objects/pickup.tscn" id="5_q5aqq"]
+[ext_resource type="PackedScene" uid="uid://dpr4tsfvuqef5" path="res://Enemies/Van/Van.tscn" id="5_xhd4d"]
 
 [sub_resource type="Environment" id="Environment_ryoya"]
 background_color = Color(1, 0.8117647, 0.47058824, 1)
@@ -47,3 +48,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.243154, 3.8146973e-06, -4.
 
 [node name="Batterie3" parent="." unique_id=2065983184 instance=ExtResource("5_q5aqq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.934903, 3.8146973e-06, -5.313547)
+
+[node name="Van" parent="." unique_id=903574580 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -28.779787)
