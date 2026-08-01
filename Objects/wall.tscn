@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dpj4eult6r2dy"]
+
+[ext_resource type="Texture2D" uid="uid://cdundf0ba3m3c" path="res://Assets/walls_test.png" id="1_c13ep"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it1lo"]
+atlas = ExtResource("1_c13ep")
+region = Rect2(0, 0, 1199, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swf1e"]
+atlas = ExtResource("1_c13ep")
+region = Rect2(1199, 0, 1199, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jijn1"]
+atlas = ExtResource("1_c13ep")
+region = Rect2(2398, 0, 1199, 1501)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfb3f"]
+atlas = ExtResource("1_c13ep")
+region = Rect2(3597, 0, 1199, 1501)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqkk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it1lo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swf1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jijn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfb3f")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ryoya"]
+size = Vector3(11.243164, 4.584961, 1)
+
+[node name="Wall" type="AnimatedSprite3D" unique_id=1547815288]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 0)
+centered = false
+sprite_frames = SubResource("SpriteFrames_pqkk7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=655541952]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 5.959079, 1.3452492, 0.06997883)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=299975949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7924805, 0)
+shape = SubResource("BoxShape3D_ryoya")
