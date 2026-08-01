@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjosybyu6hsgb"]
 
-[ext_resource type="Script" uid="uid://dmrmcdluex2cm" path="res://Enemies/turret.gd" id="1_4f8jm"]
+[ext_resource type="Script" uid="uid://dmrmcdluex2cm" path="res://Enemies/Turrets/turret.gd" id="1_4f8jm"]
 [ext_resource type="PackedScene" uid="uid://d2m4tyklslbuo" path="res://Enemies/cannon.tscn" id="2_o1vxq"]
 [ext_resource type="Texture2D" uid="uid://dlobrdb5a10g2" path="res://Assets/PillarPower/Pillar_8.png" id="2_pdlt7"]
 [ext_resource type="Texture2D" uid="uid://cfh2r4ldge1r7" path="res://Assets/PillarPower/Pillar_7.png" id="3_dgfoe"]

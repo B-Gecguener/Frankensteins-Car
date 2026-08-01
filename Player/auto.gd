@@ -13,8 +13,21 @@ class_name Player_1
 
 @export var scrap := 0
 
+@onready var collection_area: CollectionArea = $CollectionArea
+@onready var hurtbox: HurtBox = $Hurtbox
+
 var throttle := 0.0
 var car_battery = 100
+
+func _ready() -> void:
+	collection_area.scrap.connect(add_scrap)
+	collection_area.power.connect(add_power)
+
+func add_scrap(amount: int):
+	scrap += amount
+	
+func add_power(amount: int):
+	hurtbox.heal(amount)
 
 func _physics_process(delta):
 
