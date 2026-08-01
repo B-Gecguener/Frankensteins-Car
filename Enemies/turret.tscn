@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjosybyu6hsgb"]
 
 [ext_resource type="Texture2D" uid="uid://cgi6igpvfcvpk" path="res://Assets/PillarExpl/001.png" id="2_a32vy"]
-[ext_resource type="PackedScene" uid="uid://bqwiiv2ouh05x" path="res://Enemies/cannon.tscn" id="2_o1vxq"]
+[ext_resource type="PackedScene" uid="uid://d2m4tyklslbuo" path="res://Enemies/cannon.tscn" id="2_o1vxq"]
 [ext_resource type="Texture2D" uid="uid://dlobrdb5a10g2" path="res://Assets/PillarPower/Pillar_8.png" id="2_pdlt7"]
 [ext_resource type="Texture2D" uid="uid://dyyybyp41cfn" path="res://Assets/PillarExpl/002.png" id="3_46bt7"]
 [ext_resource type="Texture2D" uid="uid://cfh2r4ldge1r7" path="res://Assets/PillarPower/Pillar_7.png" id="3_dgfoe"]
@@ -46,7 +46,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
