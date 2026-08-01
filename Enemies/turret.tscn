@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bjosybyu6hsgb"]
 
-[ext_resource type="Script" uid="uid://dmrmcdluex2cm" path="res://Enemies/Turret/turret.gd" id="1_4f8jm"]
-[ext_resource type="PackedScene" uid="uid://d2m4tyklslbuo" path="res://Enemies/Turret/cannon.tscn" id="2_o1vxq"]
+[ext_resource type="Script" uid="uid://dmrmcdluex2cm" path="res://Enemies/turret.gd" id="1_4f8jm"]
+[ext_resource type="PackedScene" uid="uid://d2m4tyklslbuo" path="res://Enemies/cannon.tscn" id="2_o1vxq"]
 [ext_resource type="Texture2D" uid="uid://dlobrdb5a10g2" path="res://Assets/PillarPower/Pillar_8.png" id="2_pdlt7"]
 [ext_resource type="Texture2D" uid="uid://cfh2r4ldge1r7" path="res://Assets/PillarPower/Pillar_7.png" id="3_dgfoe"]
-[ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/Turret/hurtbox.tscn" id="3_o1vxq"]
+[ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_o1vxq"]
 [ext_resource type="Texture2D" uid="uid://wo5lq1418vhq" path="res://Assets/PillarPower/Pillar_6.png" id="4_yqv5o"]
 [ext_resource type="Texture2D" uid="uid://bufmdpikakbx3" path="res://Assets/PillarPower/Pillar_5.png" id="5_oq875"]
 [ext_resource type="Texture2D" uid="uid://dykc5d43x7n5x" path="res://Assets/PillarPower/Pillar_4.png" id="6_lvjjn"]
