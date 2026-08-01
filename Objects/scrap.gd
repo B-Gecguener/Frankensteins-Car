@@ -1,5 +1,5 @@
 extends Area3D
-class_name Batterie
+class_name Scrap
 
 var player: Player_1
 var velocity: Vector3
