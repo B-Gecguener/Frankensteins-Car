@@ -119,6 +119,8 @@ func _physics_process(delta):
 		forward_speed = -max_speed_reverse
 
 	velocity = forward * forward_speed + side
+	
+	hurtbox.use(velocity.length() / max_speed * delta * 4)
 
 
 	# Nur X/Z bewegen

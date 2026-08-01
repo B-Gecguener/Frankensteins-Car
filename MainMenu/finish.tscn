@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c5k6wva0sh8d"]
+
+[ext_resource type="Script" uid="uid://dfvwjf58kam8w" path="res://finish.gd" id="1_esfdv"]
+
+[node name="Finish" type="Area3D" unique_id=752965285]
+script = ExtResource("1_esfdv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
