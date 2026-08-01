@@ -3,8 +3,9 @@
 [ext_resource type="Script" uid="uid://w5fu0le41wo" path="res://Enemies/Van/van_gun.gd" id="1_a08c6"]
 [ext_resource type="PackedScene" uid="uid://bm4nc24dtm12d" path="res://Assets/Waffe1.blend" id="1_wt86j"]
 
-[node name="van_gun" type="Node3D" unique_id=304275943]
+[node name="van_gun" type="Node3D" unique_id=304275943 node_paths=PackedStringArray("turret")]
 script = ExtResource("1_a08c6")
+turret = NodePath("Waffe1")
 
 [node name="Waffe1" parent="." unique_id=1312188166 instance=ExtResource("1_wt86j")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
