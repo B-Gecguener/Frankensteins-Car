@@ -28,6 +28,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_67f0n"]
+size = Vector3(1.200943, 0.48242188, 0.66552734)
+
 [node name="Tankstelle" type="AnimatedSprite3D" unique_id=1874023473]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 0)
 sprite_frames = SubResource("SpriteFrames_67f0n")
@@ -40,3 +43,9 @@ shape = SubResource("BoxShape3D_wadkj")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1714452928]
 sprite_frames = SubResource("SpriteFrames_snbu8")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2019019554]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1975162278]
+transform = Transform3D(4, 0, 0, 0, 3.2766082, -2.2943058, 0, 2.2943058, 3.2766082, -0.7940979, -1.0351564, -0.6689453)
+shape = SubResource("BoxShape3D_67f0n")
