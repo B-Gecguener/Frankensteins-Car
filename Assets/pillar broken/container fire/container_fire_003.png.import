@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpy3tidtdgkoc"
-path.s3tc="res://.godot/imported/pillar broken alleine.PNG-1f4b0e3ab1a8f3d5392275079010a7da.s3tc.ctex"
+uid="uid://boo7yxl5d4pwv"
+path.s3tc="res://.godot/imported/container_fire_003.png-ae65dedf3f18134282999ee3e27fc275.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/pillar broken/pillar broken alleine.PNG"
-dest_files=["res://.godot/imported/pillar broken alleine.PNG-1f4b0e3ab1a8f3d5392275079010a7da.s3tc.ctex"]
+source_file="res://Assets/pillar broken/container fire/container_fire_003.png"
+dest_files=["res://.godot/imported/container_fire_003.png-ae65dedf3f18134282999ee3e27fc275.s3tc.ctex"]
 
 [params]
 

@@ -10,7 +10,7 @@ func _physics_process(delta: float) -> void:
 	if player:
 		velocity += global_position.direction_to(player.global_position).normalized()
 		global_position += velocity * delta
-	if global_position.y >= 0:
+	if global_position.y > 0:
 		velocity += Vector3(0,-1,0);
 		global_position += velocity
 	else: 
