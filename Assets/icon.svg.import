@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0l8duvch4l63"
-path.s3tc="res://.godot/imported/Auto_Auto_Material_BaseColor.png-4a93782e39b4edba0adee15333a7ad40.s3tc.ctex"
+uid="uid://sjd6u3t8ri1y"
+path.s3tc="res://.godot/imported/icon.svg-8193eb3d66a1b5143b8bb4c28c1dc139.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "d2fa3a0a7cc0701388fbc36f94d46919"
-}
 
 [deps]
 
-source_file="res://Auto_Auto_Material_BaseColor.png"
-dest_files=["res://.godot/imported/Auto_Auto_Material_BaseColor.png-4a93782e39b4edba0adee15333a7ad40.s3tc.ctex"]
+source_file="res://Assets/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-8193eb3d66a1b5143b8bb4c28c1dc139.s3tc.ctex"]
 
 [params]
 
@@ -42,3 +39,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=0
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

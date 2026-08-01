@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwwtvv3p687ex"
-path.s3tc="res://.godot/imported/IMG_2600.png-4749fd9076bb407d08dbb532e2592f23.s3tc.ctex"
+uid="uid://tjmr1kgqyb08"
+path.s3tc="res://.godot/imported/Auto_Auto_Material_Metallic.png-Auto_Material_Roughness.png-3cd46c08ab50cd499bfb3eeecccc1873.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "cd5150d0c41759ffdfe1b9cdd440e3b7"
+}
 
 [deps]
 
-source_file="res://IMG_2600.png"
-dest_files=["res://.godot/imported/IMG_2600.png-4749fd9076bb407d08dbb532e2592f23.s3tc.ctex"]
+source_file="res://Assets/Auto_Auto_Material_Metallic.png-Auto_Material_Roughness.png"
+dest_files=["res://.godot/imported/Auto_Auto_Material_Metallic.png-Auto_Material_Roughness.png-3cd46c08ab50cd499bfb3eeecccc1873.s3tc.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ctoidtk3uxjdm"]
 
-[ext_resource type="Script" uid="uid://dqbrutyxxxs41" path="res://auto.gd" id="1_mmbrl"]
-[ext_resource type="PackedScene" uid="uid://bo7rlg41sg4vi" path="res://Auto.glb" id="2_xpxoo"]
+[ext_resource type="Script" uid="uid://dqbrutyxxxs41" path="res://Player/auto.gd" id="1_mmbrl"]
+[ext_resource type="PackedScene" uid="uid://bo7rlg41sg4vi" path="res://Assets/Auto.glb" id="2_xpxoo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pqkk7"]
 
