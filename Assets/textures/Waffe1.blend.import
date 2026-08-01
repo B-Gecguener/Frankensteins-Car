@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bm4nc24dtm12d"
-path="res://.godot/imported/Waffe1.blend-a065e09d6ecc15a0333b2d8e458ba81d.scn"
+uid="uid://c8loakm2ha21v"
+path="res://.godot/imported/Waffe1.blend-a0bbe5552e66f4b27cd5bea0c52e2c39.scn"
 
 [deps]
 
-source_file="res://Assets/Waffe1.blend"
-dest_files=["res://.godot/imported/Waffe1.blend-a065e09d6ecc15a0333b2d8e458ba81d.scn"]
+source_file="res://Assets/textures/Waffe1.blend"
+dest_files=["res://.godot/imported/Waffe1.blend-a0bbe5552e66f4b27cd5bea0c52e2c39.scn"]
 
 [params]
 
