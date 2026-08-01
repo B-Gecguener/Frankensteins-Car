@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://dpr4tsfvuqef5"]
+[gd_scene format=3 uid="uid://n7d3qnnn1l3i"]
 
 [ext_resource type="Script" uid="uid://ds5o5ecp3w2tx" path="res://Enemies/Van/van.gd" id="1_0sr5r"]
 [ext_resource type="Texture2D" uid="uid://bq2ht3qhi22tw" path="res://Assets/Enemy/vanenemy.png" id="2_foy84"]
-[ext_resource type="PackedScene" uid="uid://n7d3qnnn1l3i" path="res://Enemies/Van/van_gun.tscn" id="3_ybk2j"]
+[ext_resource type="PackedScene" uid="uid://dl5n40o82y5w7" path="res://Enemies/Van/van_gun.tscn" id="3_fhct8"]
 [ext_resource type="Texture2D" uid="uid://8vr2f7bywqa4" path="res://Assets/pillar animations/Pillar_explosion_001.png" id="5_c5pap"]
 [ext_resource type="Texture2D" uid="uid://wlu3fcijygwu" path="res://Assets/pillar animations/Pillar_explosion_003.png" id="6_1bfma"]
 [ext_resource type="Texture2D" uid="uid://ct35ebagq0qrr" path="res://Assets/pillar animations/Pillar_explosion_005.png" id="7_x0eae"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://x6ru4mwbh16x" path="res://Assets/pillar animations/Pillar_explosion_028.png" id="16_7kyuv"]
 [ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="16_c5pap"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_67f0n"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ryoya"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -28,10 +28,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_foy84"]
-size = Vector3(1.4077759, 0.9350586, 1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_ryoya"]
+size = Vector3(2.3038788, 3.176056, 1.2553711)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_y2qk8"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wfelm"]
 animations = [{
 "frames": [],
 "loop": 0,
@@ -86,35 +86,39 @@ animations = [{
 "speed": 24.0
 }]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_0sr5r"]
-size = Vector3(1.3886719, 1, 0.76464844)
-
-[node name="Van" type="Node3D" unique_id=903574580]
+[node name="Van" type="Node3D" unique_id=1452757428]
 script = ExtResource("1_0sr5r")
-metadata/_custom_type_script = "uid://dmrmcdluex2cm"
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=354530664]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 0)
-sprite_frames = SubResource("SpriteFrames_67f0n")
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1478910900]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 1.208018, 0)
+sprite_frames = SubResource("SpriteFrames_ryoya")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1694997392]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=769924014]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=420376650]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.016296387, -0.064941406, 0)
-visible = false
-shape = SubResource("BoxShape3D_foy84")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=930531448]
+transform = Transform3D(0.9342128, 0, -0.35671628, 0, 1, 0, 0.35671628, 0, 0.9342128, -0.10264517, 0.8459778, 0.2174232)
+shape = SubResource("BoxShape3D_ryoya")
 
-[node name="van_gun" parent="." unique_id=304275943 instance=ExtResource("3_ybk2j")]
-transform = Transform3D(0.16270131, 0, 0.18981119, 0, 0.25, 0, -0.18981119, 0, 0.16270131, 0.45443094, 0.77783203, 0.6458664)
-
-[node name="ExplosionSprite" type="AnimatedSprite3D" parent="." unique_id=660528140]
-transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0.012, 9.783, 6.284)
-pixel_size = 0.011
-sprite_frames = SubResource("SpriteFrames_y2qk8")
-animation = &"explosion"
+[node name="van_gun" parent="." unique_id=304275943 instance=ExtResource("3_fhct8")]
+transform = Transform3D(-0.27298838, 0, 0.124408014, 0, 0.3, 0, -0.124408014, 0, -0.27298838, 0.43, 1.887, 1.227)
 
 [node name="Hurtbox" parent="." unique_id=1244123534 instance=ExtResource("16_c5pap")]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=796628642]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.046875, 0, 0.15527344)
-shape = SubResource("BoxShape3D_0sr5r")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=1439566691]
+transform = Transform3D(0.9342128, 0, -0.35671628, 0, 1, 0, 0.35671628, 0, 0.9342128, 0.03786173, 1.088028, 0.13439666)
+shape = SubResource("BoxShape3D_ryoya")
+
+[node name="ExplosionSprite" type="AnimatedSprite3D" parent="." unique_id=680245345]
+transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0.012, 9.783, 6.284)
+pixel_size = 0.011
+sprite_frames = SubResource("SpriteFrames_wfelm")
+animation = &"explosion"
+
+[node name="Node3D" type="Node3D" parent="." unique_id=1158063263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.946099, 0)
+top_level = true
+
+[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1300973003]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 7.745)
+projection = 1
+size = 16.887
