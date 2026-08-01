@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bqwiiv2ouh05x"]
+
+[ext_resource type="Script" uid="uid://b81cpkfof1bdu" path="res://turret.gd" id="1_c5apd"]
+[ext_resource type="PackedScene" uid="uid://bugtqdunr0uwb" path="res://turret.blend" id="2_coqkk"]
+[ext_resource type="PackedScene" uid="uid://dyoa380ej5ljk" path="res://cannon.blend" id="3_2kw7u"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c5apd"]
+height = 50.034
+radius = 48.919434
+
+[node name="Turret" type="Node3D" unique_id=921670640 node_paths=PackedStringArray("turret", "cannon")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+script = ExtResource("1_c5apd")
+turret = NodePath("turret")
+cannon = NodePath("turret/cannon")
+
+[node name="turret" parent="." unique_id=1012679340 instance=ExtResource("2_coqkk")]
+
+[node name="cannon" parent="turret" unique_id=1164056915 instance=ExtResource("3_2kw7u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0003483, -3.2130864)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1124280173]
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1941810749]
+transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, -12.721968, 0)
+shape = SubResource("CylinderShape3D_c5apd")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

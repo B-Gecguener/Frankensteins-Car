@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d4nkcgmjgirl5"]
 
 [ext_resource type="PackedScene" uid="uid://ctoidtk3uxjdm" path="res://auto.tscn" id="2_advl5"]
+[ext_resource type="PackedScene" uid="uid://bqwiiv2ouh05x" path="res://turret.tscn" id="2_lfja4"]
 [ext_resource type="Texture2D" uid="uid://bwwtvv3p687ex" path="res://IMG_2600.png" id="3_lfja4"]
 
 [sub_resource type="Gradient" id="Gradient_xhd4d"]
@@ -15,12 +16,36 @@ height = 2000
 noise = SubResource("FastNoiseLite_q5aqq")
 color_ramp = SubResource("Gradient_xhd4d")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lfja4"]
+transparency = 1
+depth_draw_mode = 2
+shading_mode = 0
+albedo_texture = ExtResource("3_lfja4")
+uv1_scale = Vector3(-1, 1, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_advl5"]
+material = SubResource("StandardMaterial3D_lfja4")
+size = Vector2(7.92, 8)
+
+[sub_resource type="Environment" id="Environment_ryoya"]
+background_color = Color(1, 0.8117647, 0.47058824, 1)
+background_energy_multiplier = 11.45
+
 [node name="Wüste" type="Node3D" unique_id=1567783565]
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1906484646]
 transform = Transform3D(-1, -5.0143647e-08, -7.161255e-08, 0, 0.81915206, -0.57357645, 8.742278e-08, -0.57357645, -0.81915206, 0, 0.42860317, 20.239721)
 alpha_cut = 1
 texture = ExtResource("3_lfja4")
+
+[node name="Turret" parent="Sprite3D" unique_id=921670640 instance=ExtResource("2_lfja4")]
+transform = Transform3D(-0.25, 6.348369e-09, 3.0922127e-08, -1.2535927e-08, 0.204788, -0.14339413, -2.8971199e-08, -0.14339413, -0.204788, -2.357909, 3.1948643, -1.4963646)
+
+[node name="Sprite3D2" type="Sprite3D" parent="." unique_id=572198048]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 18.546951, 0.42860317, 20.239721)
+alpha_cut = 1
+texture = ExtResource("3_lfja4")
+region_rect = Rect2(0, 0, 1941, 980)
 
 [node name="Boden" type="Sprite3D" parent="." unique_id=886401118]
 transform = Transform3D(-20, 3.019916e-06, -1.3200472e-13, 0, -8.742278e-07, -20, -3.019916e-06, -20, 8.742278e-07, 0, -20.215, 3.4884338)
@@ -30,3 +55,10 @@ texture = SubResource("NoiseTexture2D_7fbdt")
 
 [node name="Auto" parent="." unique_id=19318106 instance=ExtResource("2_advl5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.456951)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=90608077]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, -0.6824547, 0)
+mesh = SubResource("QuadMesh_advl5")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=148520702]
+environment = SubResource("Environment_ryoya")
