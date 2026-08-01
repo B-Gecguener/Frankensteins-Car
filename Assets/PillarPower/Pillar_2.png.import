@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mislsko3t78t"
-path.s3tc="res://.godot/imported/Pillar_06.png-b3973fb6bed908e76eacf13e2686636e.s3tc.ctex"
+uid="uid://d2oxe3v8khour"
+path.s3tc="res://.godot/imported/Pillar_2.png-54faad882226bdea505f276cb6af77a7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/PillarPower/Pillar_06.png"
-dest_files=["res://.godot/imported/Pillar_06.png-b3973fb6bed908e76eacf13e2686636e.s3tc.ctex"]
+source_file="res://Assets/PillarPower/Pillar_2.png"
+dest_files=["res://.godot/imported/Pillar_2.png-54faad882226bdea505f276cb6af77a7.s3tc.ctex"]
 
 [params]
 
