@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df1ft2htrct2v"
-path="res://.godot/imported/container_fire_003.png-ae65dedf3f18134282999ee3e27fc275.ctex"
+uid="uid://cd6vesinag5fp"
+path="res://.godot/imported/bullet hit002.png-878a3b26b7bdcc65eccc3e2201659201.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pillar broken/container fire/container_fire_003.png"
-dest_files=["res://.godot/imported/container_fire_003.png-ae65dedf3f18134282999ee3e27fc275.ctex"]
+source_file="res://Assets/bullets/bullet hits/bullet hit002.png"
+dest_files=["res://.godot/imported/bullet hit002.png-878a3b26b7bdcc65eccc3e2201659201.ctex"]
 
 [params]
 

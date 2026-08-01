@@ -2,35 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sct7imxoux7d"
-<<<<<<< HEAD
+uid="uid://g8rejqy64bd4"
 path="res://.godot/imported/container_fire_007.png-c8bbcd1c661756eb71c7a29a1f310f34.ctex"
 metadata={
 "vram_texture": false
-=======
-path.s3tc="res://.godot/imported/container_fire_007.png-c8bbcd1c661756eb71c7a29a1f310f34.s3tc.ctex"
-metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
->>>>>>> be0f08158d0ce9706fa61c2a465b41882f1d8179
 }
 
 [deps]
 
 source_file="res://Assets/pillar broken/container fire/container_fire_007.png"
-<<<<<<< HEAD
 dest_files=["res://.godot/imported/container_fire_007.png-c8bbcd1c661756eb71c7a29a1f310f34.ctex"]
 
 [params]
 
 compress/mode=0
-=======
-dest_files=["res://.godot/imported/container_fire_007.png-c8bbcd1c661756eb71c7a29a1f310f34.s3tc.ctex"]
-
-[params]
-
-compress/mode=2
->>>>>>> be0f08158d0ce9706fa61c2a465b41882f1d8179
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -38,11 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-<<<<<<< HEAD
 mipmaps/generate=false
-=======
-mipmaps/generate=true
->>>>>>> be0f08158d0ce9706fa61c2a465b41882f1d8179
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -56,8 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-<<<<<<< HEAD
 detect_3d/compress_to=1
-=======
-detect_3d/compress_to=0
->>>>>>> be0f08158d0ce9706fa61c2a465b41882f1d8179
