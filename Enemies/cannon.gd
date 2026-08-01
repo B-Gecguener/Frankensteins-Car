@@ -7,7 +7,7 @@ extends Node3D
 @onready var detection_area: Area3D = $Area3D
 @onready var muzzle: Node3D = $turret/cannon/Muzzle
 
-var projectile: PackedScene = load("res://Enemies/projectile.tscn")
+var projectile: PackedScene = load("res://Objects/projectile.tscn")
 
 @export_group("Aiming")
 @export var max_yaw_speed: float = 7       # rad/s, top traverse speed
