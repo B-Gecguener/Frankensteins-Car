@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d2m4tyklslbuo"]
 
-[ext_resource type="Script" uid="uid://b81cpkfof1bdu" path="res://Enemies/cannon.gd" id="1_gvh84"]
+[ext_resource type="Script" uid="uid://b81cpkfof1bdu" path="res://Enemies/Turret/cannon.gd" id="1_gvh84"]
 [ext_resource type="PackedScene" uid="uid://bugtqdunr0uwb" path="res://Assets/turret.blend" id="2_xpqih"]
 [ext_resource type="PackedScene" uid="uid://dyoa380ej5ljk" path="res://Assets/cannon.blend" id="3_u6ywg"]
 

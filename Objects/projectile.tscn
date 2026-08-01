@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dkik1yj2en80w"]
 
-[ext_resource type="PackedScene" uid="uid://bsm6tbahb0c5" path="res://Enemies/hit_box.tscn" id="1_7wvss"]
+[ext_resource type="PackedScene" uid="uid://bsm6tbahb0c5" path="res://Enemies/Turret/hit_box.tscn" id="1_7wvss"]
 [ext_resource type="Script" uid="uid://i6x6n4tvvcg6" path="res://Objects/projectile.gd" id="1_v73ce"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v73ce"]

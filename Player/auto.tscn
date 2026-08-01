@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dqbrutyxxxs41" path="res://Player/auto.gd" id="1_mmbrl"]
 [ext_resource type="PackedScene" uid="uid://b12eb0p0kxshs" path="res://HUD/HUD.tscn" id="2_wa6o6"]
 [ext_resource type="PackedScene" uid="uid://djjxnly4fgt11" path="res://Assets/AutoStylized.blend" id="2_xpxoo"]
-[ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_cvfjh"]
+[ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/Turret/hurtbox.tscn" id="3_cvfjh"]
 [ext_resource type="PackedScene" uid="uid://bm4nc24dtm12d" path="res://Assets/Waffe1.blend" id="4_waffe1"]
 [ext_resource type="Script" uid="uid://dvf8phwi81tvp" path="res://Player/spielerWaffe.gd" id="5_waffe1"]
 [ext_resource type="PackedScene" uid="uid://d0iebkq8mebve" path="res://collection_area.tscn" id="7_syyyd"]
