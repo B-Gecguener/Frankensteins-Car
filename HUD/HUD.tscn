@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b12eb0p0kxshs"]
 
 [ext_resource type="Script" uid="uid://dxvcadf40qnsa" path="res://HUD/hud.gd" id="1_f31rt"]
+[ext_resource type="Script" path="res://HUD/death_screen.gd" id="2_death"]
 
 [node name="Hud" type="CanvasLayer" unique_id=240368453]
 script = ExtResource("1_f31rt")
@@ -57,3 +58,61 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "0 Scrap"
 horizontal_alignment = 1
+
+[node name="DeathScreen" type="Control" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_death")
+
+[node name="Background" type="ColorRect" parent="DeathScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="CenterContainer" type="CenterContainer" parent="DeathScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DeathScreen/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 28
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="DeathScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.9, 0.15, 0.15, 1)
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+text = "You Died"
+
+[node name="RestartButton" type="Button" parent="DeathScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(240, 60)
+theme_override_font_sizes/font_size = 24
+text = "Restart"
+
+[node name="MainMenuButton" type="Button" parent="DeathScreen/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+custom_minimum_size = Vector2(240, 60)
+theme_override_font_sizes/font_size = 24
+text = "Main Menu"
+
+[connection signal="pressed" from="DeathScreen/CenterContainer/VBoxContainer/RestartButton" to="DeathScreen" method="_on_restart_button_pressed"]
+[connection signal="pressed" from="DeathScreen/CenterContainer/VBoxContainer/MainMenuButton" to="DeathScreen" method="_on_main_menu_button_pressed"]

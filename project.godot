@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Frankensteins Car"
-run/main_scene="uid://d4nkcgmjgirl5"
+run/main_scene="res://MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
@@ -26,6 +26,7 @@ folder_colors={
 "res://Assets/": "blue",
 "res://Enemies/": "red",
 "res://HUD/": "gray",
+"res://MainMenu/": "purple",
 "res://Player/": "green"
 }
 
