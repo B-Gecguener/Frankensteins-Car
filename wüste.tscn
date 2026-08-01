@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ctoidtk3uxjdm" path="res://Player/auto.tscn" id="2_advl5"]
 [ext_resource type="PackedScene" uid="uid://bqwiiv2ouh05x" path="res://Enemies/turret.tscn" id="2_lfja4"]
 [ext_resource type="Texture2D" uid="uid://bwwtvv3p687ex" path="res://Assets/IMG_2600.png" id="3_lfja4"]
+[ext_resource type="PackedScene" uid="uid://b12eb0p0kxshs" path="res://HUD/HUD.tscn" id="4_7fbdt"]
 
 [sub_resource type="Gradient" id="Gradient_xhd4d"]
 colors = PackedColorArray(0.4962803, 0.21944582, 4.813075e-08, 1, 0.9, 0.4344, 0.026999973, 1)
@@ -32,6 +33,8 @@ background_color = Color(1, 0.8117647, 0.47058824, 1)
 background_energy_multiplier = 11.45
 
 [node name="Wüste" type="Node3D" unique_id=1567783565]
+
+[node name="Hud" parent="." unique_id=240368453 instance=ExtResource("4_7fbdt")]
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1906484646]
 transform = Transform3D(-1, -5.0143647e-08, -7.161255e-08, 0, 0.81915206, -0.57357645, 8.742278e-08, -0.57357645, -0.81915206, 0, 0.42860317, 20.239721)
