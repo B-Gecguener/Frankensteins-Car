@@ -3,8 +3,12 @@ class_name Projectile
 
 @export var speed: float = 30.0
 var flight_vector: Vector3 = Vector3()
+var shooter: HurtBox = null   # set by whoever fired this, before adding it to the tree
 
-var impact_ani: PackedScene = load("res://Objects/impact.tscn")
+@onready var hit_box: HitBox = $HitBox
+
+func _ready() -> void:
+	hit_box.shooter = shooter
 
 func _process(delta: float) -> void:
 	global_position += flight_vector * speed * delta
@@ -12,11 +16,7 @@ func _process(delta: float) -> void:
 		inpact()
 
 func _on_hit_box_hit() -> void:
-	queue_free()
+	inpact()
 
 func inpact():
-	var impact: Node3D = impact_ani.instantiate()
-	impact.get_children()[0].animation_finished.connect(impact.queue_free)
-	get_parent().get_parent().add_child(impact)
-	impact.global_position = global_position
 	queue_free()

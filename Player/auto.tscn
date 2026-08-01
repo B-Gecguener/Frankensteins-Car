@@ -46,6 +46,9 @@ shape = SubResource("CapsuleShape3D_pqkk7")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.5391985, 0.16613308)
 script = ExtResource("5_waffe1")
 
+[node name="Muzzle" type="Node3D" parent="Waffe1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -5)
+
 [node name="Hurtbox" parent="." unique_id=1244123534 instance=ExtResource("3_cvfjh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.20224339)
 
