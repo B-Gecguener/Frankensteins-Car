@@ -3,18 +3,50 @@
 [ext_resource type="Texture2D" uid="uid://cispwqwjicpah" path="res://Assets/Pillar.png" id="1_o1vxq"]
 [ext_resource type="Texture2D" uid="uid://cgi6igpvfcvpk" path="res://Assets/PillarExpl/001.png" id="2_a32vy"]
 [ext_resource type="PackedScene" uid="uid://bqwiiv2ouh05x" path="res://Enemies/cannon.tscn" id="2_o1vxq"]
+[ext_resource type="Texture2D" uid="uid://dlobrdb5a10g2" path="res://Assets/PillarPower/Pillar_01.png" id="2_pdlt7"]
 [ext_resource type="Texture2D" uid="uid://dyyybyp41cfn" path="res://Assets/PillarExpl/002.png" id="3_46bt7"]
+[ext_resource type="Texture2D" uid="uid://cfh2r4ldge1r7" path="res://Assets/PillarPower/Pillar_02.png" id="3_dgfoe"]
 [ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_o1vxq"]
 [ext_resource type="Texture2D" uid="uid://bier6sqcscl0s" path="res://Assets/PillarExpl/003.png" id="4_mxlia"]
+[ext_resource type="Texture2D" uid="uid://wo5lq1418vhq" path="res://Assets/PillarPower/Pillar_03.png" id="4_yqv5o"]
 [ext_resource type="Texture2D" uid="uid://c6wup554re7ig" path="res://Assets/PillarExpl/004.png" id="5_e7k8i"]
+[ext_resource type="Texture2D" uid="uid://bufmdpikakbx3" path="res://Assets/PillarPower/Pillar_04.png" id="5_oq875"]
 [ext_resource type="Texture2D" uid="uid://dkmf0rmupqn0e" path="res://Assets/PillarExpl/005.png" id="6_46ixl"]
+[ext_resource type="Texture2D" uid="uid://dykc5d43x7n5x" path="res://Assets/PillarPower/Pillar_05.png" id="6_lvjjn"]
+[ext_resource type="Texture2D" uid="uid://mislsko3t78t" path="res://Assets/PillarPower/Pillar_06.png" id="7_q0744"]
 [ext_resource type="Texture2D" uid="uid://rkrnlfytg6ka" path="res://Assets/PillarExpl/006.png" id="7_rr48h"]
+[ext_resource type="Texture2D" uid="uid://d2oxe3v8khour" path="res://Assets/PillarPower/Pillar_07.png" id="8_4f8jm"]
+[ext_resource type="Texture2D" uid="uid://c8jvil2pl5724" path="res://Assets/PillarPower/Pillar_08.png" id="9_fp3x4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ryoya"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_o1vxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pdlt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dgfoe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yqv5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oq875")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lvjjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q0744")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4f8jm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fp3x4")
 }],
 "loop": 1,
 "name": &"default",
@@ -39,7 +71,7 @@ animations = [{
 "duration": 8.0,
 "texture": ExtResource("7_rr48h")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"explo",
 "speed": 24.0
 }]
@@ -54,7 +86,7 @@ radius = 0.9160156
 transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0.012, 1.635, 0.314)
 pixel_size = 0.011
 sprite_frames = SubResource("SpriteFrames_ryoya")
-frame_progress = 0.61917645
+frame_progress = 0.7989557
 
 [node name="Cannon" parent="." unique_id=921670640 instance=ExtResource("2_o1vxq")]
 transform = Transform3D(-0.29, 0, 2.5352605e-08, 0, 0.29, 0, -2.5352605e-08, 0, -0.29, 0, 6.4, 0)
@@ -82,7 +114,7 @@ shape = SubResource("CylinderShape3D_pqkk7")
 
 [node name="AnimatedSprite3D2" type="AnimatedSprite3D" parent="." unique_id=748191637]
 transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0.012, 9.783, 6.284)
+visible = false
 pixel_size = 0.011
 sprite_frames = SubResource("SpriteFrames_ryoya")
 animation = &"explo"
-frame_progress = 0.30393988
