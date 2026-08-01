@@ -5,6 +5,8 @@ class_name Projectile
 var flight_vector: Vector3 = Vector3()
 var shooter: HurtBox = null   # set by whoever fired this, before adding it to the tree
 
+var impact_ani: PackedScene = load("res://Objects/impact.tscn")
+
 @onready var hit_box: HitBox = $HitBox
 
 func _ready() -> void:
@@ -19,4 +21,8 @@ func _on_hit_box_hit() -> void:
 	inpact()
 
 func inpact():
+	var impact: Node3D = impact_ani.instantiate()
+	impact.get_children()[0].animation_finished.connect(impact.queue_free)
+	get_parent().get_parent().add_child(impact)
+	impact.global_position = global_position
 	queue_free()

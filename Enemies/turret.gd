@@ -10,6 +10,8 @@ var scrap: PackedScene = load("res://Objects/scrap.tscn")
 var batterie: PackedScene = load("res://Objects/batterie.tscn")
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
+var ruined: bool = false
+
 var velocity: Vector3 = Vector3(0,-1,0);
 
 # Called when the node enters the scene tree for the first time.
@@ -20,12 +22,14 @@ func _ready() -> void:
 
 
 func explode():
-	explo_sprite.play("explosion")
-	explo_sprite.animation_finished.disconnect(explode)
-	#ruin_turret()
+	if not ruined:
+		ruined = true
+		explo_sprite.play("explosion")
+		explo_sprite.animation_finished.disconnect(explode)
 
 func ruin_turret():
-	turret.queue_free()
+	if turret:
+		turret.queue_free()
 	turret_sprite.play("ruined")
 
 func spawn_drops():
