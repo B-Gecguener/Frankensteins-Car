@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bugtqdunr0uwb"
-path="res://.godot/imported/turret.blend-879f8a385ee45c8a6bfa9ee38668acdb.scn"
+uid="uid://dyoa380ej5ljk"
+path="res://.godot/imported/cannon.blend-bb155d719f69b212055d61421c721e71.scn"
 
 [deps]
 
-source_file="res://turret.blend"
-dest_files=["res://.godot/imported/turret.blend-879f8a385ee45c8a6bfa9ee38668acdb.scn"]
+source_file="res://Assets/cannon.blend"
+dest_files=["res://.godot/imported/cannon.blend-bb155d719f69b212055d61421c721e71.scn"]
 
 [params]
 
