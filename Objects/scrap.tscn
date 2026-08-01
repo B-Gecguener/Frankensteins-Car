@@ -3,6 +3,9 @@
 [ext_resource type="Script" uid="uid://cy2l3xmxuhw8x" path="res://Objects/scrap.gd" id="1_abb3c"]
 [ext_resource type="Texture2D" uid="uid://drf6t15e1sq8" path="res://Assets/Scrap.png" id="2_v2qwe"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_ryoya"]
+radius = 1.0897262
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_abb3c"]
 animations = [{
 "frames": [{
@@ -14,11 +17,24 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_pqkk7"]
+radius = 15.079598
+
 [node name="Scrap" type="Area3D" unique_id=339771216]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_abb3c")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1065021903]
+shape = SubResource("SphereShape3D_ryoya")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1856949997]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0.76894426, 0)
 sprite_frames = SubResource("SpriteFrames_abb3c")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1059990911]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1045932556]
+shape = SubResource("SphereShape3D_pqkk7")
+
+[connection signal="body_entered" from="Area3D" to="." method="body_entered"]

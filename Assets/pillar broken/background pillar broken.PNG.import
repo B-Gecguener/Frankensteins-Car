@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wlu3fcijygwu"
-path="res://.godot/imported/Pillar_explosion_003.png-4f12dd68fef6c1e857f952210c2542f5.ctex"
+uid="uid://cj063ogl0ud17"
+path="res://.godot/imported/background pillar broken.PNG-62f8b24b50c848f44e8fd28a734a0675.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/pillar animations/Pillar_explosion_003.png"
-dest_files=["res://.godot/imported/Pillar_explosion_003.png-4f12dd68fef6c1e857f952210c2542f5.ctex"]
+source_file="res://Assets/pillar broken/background pillar broken.PNG"
+dest_files=["res://.godot/imported/background pillar broken.PNG-62f8b24b50c848f44e8fd28a734a0675.ctex"]
 
 [params]
 

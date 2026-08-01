@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dlt65oh5vr2bb" path="res://Assets/Batterie.png" id="2_q6eu3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ryoya"]
-radius = 15.031271
+radius = 0.9773467
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ryoya"]
 animations = [{
@@ -17,7 +17,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_pxaap"]
+radius = 15.130465
+
 [node name="Batterie" type="Area3D" unique_id=53947675]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_pxaap")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1101549671]
@@ -27,4 +32,9 @@ shape = SubResource("SphereShape3D_ryoya")
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0.76894426, 0)
 sprite_frames = SubResource("SpriteFrames_ryoya")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Area3D" type="Area3D" parent="." unique_id=2087988732]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=367636907]
+shape = SubResource("SphereShape3D_pxaap")
+
+[connection signal="body_entered" from="Area3D" to="." method="body_entered"]
