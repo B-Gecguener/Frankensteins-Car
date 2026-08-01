@@ -10,7 +10,6 @@ signal health_changed(current: float, max: float)
 func damage(dmg: float) -> void:
 	car_battery -= dmg
 	health_changed.emit(car_battery, max_car_battery)
-	print("damaged!!")
 	if car_battery <= 0:
 		died.emit()
 

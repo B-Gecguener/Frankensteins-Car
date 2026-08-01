@@ -21,6 +21,7 @@ var pitch_speed: float = 0.0
 var target: Vector3 = Vector3.ZERO
 
 var loaded: bool = true
+var active: bool = true
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 var randomness: Vector3 = Vector3(rng.randf_range(0.0,3.0),0,rng.randf_range(0.0,3.0))
@@ -33,31 +34,32 @@ func _recalc_randomness() -> void:
 	randomness = Vector3(rng.randf_range(0.0,8.0),0,rng.randf_range(0.0,8.0))
 
 func _physics_process(delta: float) -> void:
-	var desired_yaw_speed: float = 0.0
-	var desired_pitch_speed: float = 0.0
+	if active:
+		var desired_yaw_speed: float = 0.0
+		var desired_pitch_speed: float = 0.0
 
-	if car:
-		var speed: float = car.velocity.length()*delta
-		var vorhalt: Vector3 = (-car.transform.basis.z) * speed * global_position.distance_to(car.global_position) *3
-		
-		var target = car.global_position + vorhalt + (randomness * speed)
+		if car:
+			var speed: float = car.velocity.length()*delta
+			var vorhalt: Vector3 = (-car.transform.basis.z) * speed * global_position.distance_to(car.global_position) *3
+			
+			var target = car.global_position + vorhalt + (randomness * speed)
 
-		var yaw_error: float = angle_difference(turret.rotation.y, _target_yaw(target))
-		var pitch_error: float = angle_difference(cannon.rotation.x, _target_pitch(target))
+			var yaw_error: float = angle_difference(turret.rotation.y, _target_yaw(target))
+			var pitch_error: float = angle_difference(cannon.rotation.x, _target_pitch(target))
 
-		desired_yaw_speed = clampf(yaw_error * tracking_gain, -max_yaw_speed, max_yaw_speed)
-		desired_pitch_speed = clampf(pitch_error * tracking_gain, -max_pitch_speed, max_pitch_speed)
-		if loaded:
-				fire()
-				
-	# momentum: angular velocity can only change at a limited rate
-	yaw_speed = move_toward(yaw_speed, desired_yaw_speed, yaw_accel * delta)
-	pitch_speed = move_toward(pitch_speed, desired_pitch_speed, pitch_accel * delta)
+			desired_yaw_speed = clampf(yaw_error * tracking_gain, -max_yaw_speed, max_yaw_speed)
+			desired_pitch_speed = clampf(pitch_error * tracking_gain, -max_pitch_speed, max_pitch_speed)
+			if loaded:
+					fire()
+					
+		# momentum: angular velocity can only change at a limited rate
+		yaw_speed = move_toward(yaw_speed, desired_yaw_speed, yaw_accel * delta)
+		pitch_speed = move_toward(pitch_speed, desired_pitch_speed, pitch_accel * delta)
 
-	turret.rotation.y = wrapf(turret.rotation.y + yaw_speed * delta, -PI, PI)
+		turret.rotation.y = wrapf(turret.rotation.y + yaw_speed * delta, -PI, PI)
 
-	var new_pitch: float = cannon.rotation.x + pitch_speed * delta
-	cannon.rotation.x = new_pitch
+		var new_pitch: float = cannon.rotation.x + pitch_speed * delta
+		cannon.rotation.x = new_pitch
 
 func fire() -> void:
 	var bullet: Projectile = projectile.instantiate()

@@ -18,7 +18,7 @@ animations = [{
 }]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_pxaap"]
-radius = 15.130465
+radius = 7.0
 
 [node name="Batterie" type="Area3D" unique_id=53947675]
 collision_layer = 4
