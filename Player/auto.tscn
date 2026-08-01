@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_cvfjh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pqkk7"]
-radius = 0.7026367
+radius = 0.8095703
 height = 2.373993
 
 [node name="Auto" type="CharacterBody3D" unique_id=19318106]
