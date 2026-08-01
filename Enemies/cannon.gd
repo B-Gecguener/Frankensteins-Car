@@ -14,7 +14,7 @@ var projectile: PackedScene = load("res://Enemies/projectile.tscn")
 @export var max_pitch_speed: float = 0.8
 @export var yaw_accel: float = 10            # rad/sÂ², lower = more momentum
 @export var pitch_accel: float = 3
-@export var tracking_gain: float = 4.0        # how aggressively it closes the error
+@export var tracking_gain: float = 8.0       # how aggressively it closes the error
 
 var yaw_speed: float = 0.0
 var pitch_speed: float = 0.0
@@ -23,7 +23,7 @@ var target: Vector3 = Vector3.ZERO
 var loaded: bool = true
 
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
-var randomness: Vector3 = Vector3(rng.randf_range(0.0,8.0),0,rng.randf_range(0.0,8.0))
+var randomness: Vector3 = Vector3(rng.randf_range(0.0,3.0),0,rng.randf_range(0.0,3.0))
 
 func _ready() -> void:
 	_recalc_randomness()
