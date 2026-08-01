@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cdjtmxvwxmyd6"]
 
-[ext_resource type="Script" uid="uid://lucg0dwrybc4" path="res://Objects/batterie.gd" id="1_pxaap"]
+[ext_resource type="Script" uid="uid://lucg0dwrybc4" path="res://Objects/pickup.gd" id="1_1j7wo"]
 [ext_resource type="Texture2D" uid="uid://dlt65oh5vr2bb" path="res://Assets/Batterie.png" id="2_q6eu3"]
+[ext_resource type="Texture2D" uid="uid://drf6t15e1sq8" path="res://Assets/Scrap.png" id="3_q6eu3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ryoya"]
 radius = 0.9773467
@@ -13,17 +14,25 @@ animations = [{
 "texture": ExtResource("2_q6eu3")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"batterie",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_q6eu3")
+}],
+"loop": 1,
+"name": &"scrap",
 "speed": 5.0
 }]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_pxaap"]
 radius = 7.0
 
-[node name="Batterie" type="Area3D" unique_id=53947675]
+[node name="Pickup" type="Area3D" unique_id=53947675]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("1_pxaap")
+script = ExtResource("1_1j7wo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1101549671]
 shape = SubResource("SphereShape3D_ryoya")
@@ -31,6 +40,7 @@ shape = SubResource("SphereShape3D_ryoya")
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=998692107]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0.76894426, 0)
 sprite_frames = SubResource("SpriteFrames_ryoya")
+animation = &"batterie"
 
 [node name="Area3D" type="Area3D" parent="." unique_id=2087988732]
 

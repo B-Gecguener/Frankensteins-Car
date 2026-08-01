@@ -6,8 +6,7 @@ class_name Turret
 @onready var turret_sprite: AnimatedSprite3D = $TurretSprite
 @onready var turret: Node3D = $Cannon
 
-var scrap: PackedScene = load("res://Objects/scrap.tscn")
-var batterie: PackedScene = load("res://Objects/batterie.tscn")
+var pickup: PackedScene = load("res://Objects/pickup.tscn")
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 var ruined: bool = false
@@ -42,12 +41,10 @@ func spawn_drops():
 	var drop_dir: Vector3 = Vector3(1,0,0)
 	
 	for i in range(4):
+		var pickup: Pickup = pickup.instantiate()
 		if i <= batterie_amount-1:
-			var batterie_: Batterie = batterie.instantiate()
-			add_child(batterie_)
-			batterie_.global_position = Vector3(global_position.x, 0, global_position.z) + drop_dir*5
+			pickup.pickup_kind = pickup.pickupKind.batterie
 		else:
-			var scrap_: Scrap = scrap.instantiate()
-			add_child(scrap_)
-			scrap_.global_position = Vector3(global_position.x, 0, global_position.z) + drop_dir*5
-		drop_dir.rotated(Vector3(0,1,0), 45)
+			pickup.pickup_kind = pickup.pickupKind.scrap
+		add_child(pickup)
+		pickup.global_position = Vector3(global_position.x, 0, global_position.z) + drop_dir.rotated(Vector3(0,1,0),i*30)*2
