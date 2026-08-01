@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dqbrutyxxxs41" path="res://Player/auto.gd" id="1_mmbrl"]
 [ext_resource type="PackedScene" uid="uid://d2jvks1ncoy1g" path="res://Enemies/hurtbox.tscn" id="3_cvfjh"]
 [ext_resource type="PackedScene" uid="uid://c1tgoag1trp6i" path="res://Player/AutoStylized.blend" id="3_wa6o6"]
+[ext_resource type="PackedScene" uid="uid://d15purwjs62uq" path="res://Player/Waffe1.blend" id="4_wa6o6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pqkk7"]
 radius = 0.7128906
@@ -42,3 +43,6 @@ shape = SubResource("CapsuleShape3D_pqkk7")
 
 [node name="AutoStylized" parent="." unique_id=1316777138 instance=ExtResource("3_wa6o6")]
 transform = Transform3D(-6.5567085e-09, 0, 0.15, 0, 0.15, 0, -0.15, 0, -6.5567085e-09, 0, 0.09173167, -0.81750154)
+
+[node name="Waffe1" parent="." unique_id=1504636609 instance=ExtResource("4_wa6o6")]
+transform = Transform3D(-4.6348228e-07, -0.00026179882, 0.14999978, 0.00026179882, 0.14999953, 0.0002617993, -0.14999975, 0.00026179926, -6.556699e-09, -0.004468739, 0.935612, -0.13210881)
