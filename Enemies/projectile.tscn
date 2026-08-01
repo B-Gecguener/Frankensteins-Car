@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dkik1yj2en80w"]
+
+[ext_resource type="PackedScene" uid="uid://bsm6tbahb0c5" path="res://Enemies/hit_box.tscn" id="1_7wvss"]
+[ext_resource type="Script" uid="uid://i6x6n4tvvcg6" path="res://Enemies/projectile.gd" id="1_v73ce"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v73ce"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_ryoya"]
+material = SubResource("StandardMaterial3D_v73ce")
+radial_segments = 6
+rings = 3
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ryoya"]
+radius = 0.75
+
+[node name="Projectile" type="Node3D" unique_id=1298098876]
+script = ExtResource("1_v73ce")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=913271144]
+mesh = SubResource("SphereMesh_ryoya")
+
+[node name="HitBox" parent="." unique_id=469772956 instance=ExtResource("1_7wvss")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" unique_id=1404704840]
+shape = SubResource("SphereShape3D_ryoya")
+debug_fill = false
+
+[connection signal="hit" from="HitBox" to="." method="_on_hit_box_hit"]
