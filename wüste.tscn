@@ -20,16 +20,17 @@ texture_filter = 0
 texture = ExtResource("2_7fbdt")
 
 [node name="Auto" parent="." unique_id=19318106 instance=ExtResource("2_advl5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17846274, 19.456951)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17846274, 23.49017)
 max_speed = 90.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=148520702]
 environment = SubResource("Environment_ryoya")
 
 [node name="Turret" parent="." unique_id=1454328288 instance=ExtResource("2_lfja4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.010185, 0, 9.023007)
 
 [node name="Turret2" parent="." unique_id=1768601208 instance=ExtResource("2_lfja4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.78507, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.720415, 0, -7.738641)
 
 [node name="Turret3" parent="." unique_id=284138042 instance=ExtResource("2_lfja4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4909897, 0, -11.788792)
@@ -41,7 +42,7 @@ light_specular = 1.098
 shadow_enabled = true
 
 [node name="Batterie" parent="." unique_id=511275767 instance=ExtResource("5_q5aqq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.2804146, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.548637, 0, -1.8234739)
 
 [node name="Batterie2" parent="." unique_id=138817519 instance=ExtResource("5_q5aqq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.243154, 3.8146973e-06, -4.830202)
@@ -50,7 +51,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.243154, 3.8146973e-06, -4.
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.934903, 3.8146973e-06, -5.313547)
 
 [node name="Wall" parent="." unique_id=1547815288 instance=ExtResource("5_xhd4d")]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, -0.2757759, -42.996407)
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, -0.2757759, -49.216496)
 
 [node name="Wall7" parent="Wall" unique_id=1293724036 instance=ExtResource("5_xhd4d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.09494, 0, 0)
