@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d18oq1hp6iv3p"
+path="res://.godot/imported/The Prodigy - Invaders Must Die (Official Video) 4.mp3-b082cc3da18141a9d9d1eee942ed0379.mp3str"
+
+[deps]
+
+source_file="res://Sound/The Prodigy - Invaders Must Die (Official Video) 4.mp3"
+dest_files=["res://.godot/imported/The Prodigy - Invaders Must Die (Official Video) 4.mp3-b082cc3da18141a9d9d1eee942ed0379.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
