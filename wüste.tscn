@@ -1,11 +1,13 @@
 [gd_scene format=3 uid="uid://d4nkcgmjgirl5"]
 
 [ext_resource type="Texture2D" uid="uid://duje7f1n056dn" path="res://Assets/WüstenBoden.png" id="2_7fbdt"]
-[ext_resource type="PackedScene" uid="uid://ctoidtk3uxjdm" path="res://Player/auto.tscn" id="2_advl5"]
 [ext_resource type="PackedScene" uid="uid://bjosybyu6hsgb" path="res://Enemies/Turrets/turret.tscn" id="2_lfja4"]
 [ext_resource type="PackedScene" uid="uid://cdjtmxvwxmyd6" path="res://Objects/pickup.tscn" id="5_q5aqq"]
 [ext_resource type="PackedScene" uid="uid://dpj4eult6r2dy" path="res://Objects/wall.tscn" id="5_xhd4d"]
+[ext_resource type="PackedScene" uid="uid://w0rosc2k8i3t" path="res://Player/player_spawn.tscn" id="6_tmyd5"]
 [ext_resource type="PackedScene" uid="uid://cm4ielt7asvhc" path="res://Enemies/Van/van.tscn" id="6_xhd4d"]
+[ext_resource type="PackedScene" uid="uid://cicelyxc2t5ks" path="res://Objects/LevelGate.tscn" id="7_gwk0m"]
+[ext_resource type="PackedScene" uid="uid://bgyjpujfxegyp" path="res://wüste2.tscn" id="8_1lwex"]
 
 [sub_resource type="Environment" id="Environment_ryoya"]
 background_color = Color(1, 0.8117647, 0.47058824, 1)
@@ -19,10 +21,6 @@ pixel_size = 0.005
 alpha_cut = 1
 texture_filter = 0
 texture = ExtResource("2_7fbdt")
-
-[node name="Auto" parent="." unique_id=19318106 instance=ExtResource("2_advl5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.17846274, 33.076645)
-max_speed = 90.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=148520702]
 environment = SubResource("Environment_ryoya")
@@ -112,3 +110,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.135329, 0, -39.42609)
 
 [node name="Van5" parent="." unique_id=1383923734 instance=ExtResource("6_xhd4d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.063625, 0, -43.310623)
+
+[node name="PlayerSpawn" parent="." unique_id=2107161125 instance=ExtResource("6_tmyd5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23673391, 0, 35.510612)
+
+[node name="LevelGate" parent="." unique_id=129769928 instance=ExtResource("7_gwk0m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9790907, -3.8146973e-06, -49.11982)
+next_level = ExtResource("8_1lwex")

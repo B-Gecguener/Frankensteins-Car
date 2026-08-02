@@ -15,6 +15,10 @@ run/main_scene="res://MainMenu/main_menu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
 
+[autoload]
+
+Levelmanager="*uid://7bawkf5cvw2h"
+
 [display]
 
 window/size/viewport_width=1920

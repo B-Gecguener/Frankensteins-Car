@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://bgyjpujfxegyp"]
+
+[ext_resource type="Texture2D" uid="uid://duje7f1n056dn" path="res://Assets/WüstenBoden.png" id="1_0q31x"]
+[ext_resource type="PackedScene" uid="uid://bjosybyu6hsgb" path="res://Enemies/Turrets/turret.tscn" id="2_hudlv"]
+[ext_resource type="PackedScene" uid="uid://dpj4eult6r2dy" path="res://Objects/wall.tscn" id="4_8cg42"]
+[ext_resource type="PackedScene" uid="uid://cm4ielt7asvhc" path="res://Enemies/Van/van.tscn" id="5_scxgl"]
+[ext_resource type="PackedScene" uid="uid://w0rosc2k8i3t" path="res://Player/player_spawn.tscn" id="6_1bs6b"]
+
+[sub_resource type="Environment" id="Environment_ryoya"]
+background_color = Color(1, 0.8117647, 0.47058824, 1)
+background_energy_multiplier = 11.45
+
+[node name="Wüste" type="Node3D" unique_id=1567783565]
+
+[node name="Boden" type="Sprite3D" parent="." unique_id=886401118]
+transform = Transform3D(-20, 3.019916e-06, -1.3200472e-13, 0, -8.742278e-07, -20, -3.019916e-06, -20, 8.742278e-07, 0.17673874, -0.44491768, 3.717865)
+pixel_size = 0.005
+alpha_cut = 1
+texture_filter = 0
+texture = ExtResource("1_0q31x")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=148520702]
+environment = SubResource("Environment_ryoya")
+
+[node name="Turret" parent="." unique_id=1454328288 instance=ExtResource("2_hudlv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.57159, 0, 1.537683)
+
+[node name="Turret2" parent="." unique_id=1768601208 instance=ExtResource("2_hudlv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.720415, 0, -7.738641)
+
+[node name="Turret3" parent="." unique_id=284138042 instance=ExtResource("2_hudlv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4909897, 0, -11.788792)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1504048444]
+transform = Transform3D(-0.17591612, -0.3366107, -0.9250659, 0.06288496, -0.9416439, 0.33068442, -0.9823945, 0, 0.18681808, 0, 14.406076, 0)
+light_energy = 0.215
+light_specular = 1.098
+shadow_enabled = true
+
+[node name="Wall" parent="." unique_id=1547815288 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, -0.2757759, -19.22165)
+
+[node name="Wall7" parent="Wall" unique_id=1293724036 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.09494, 0, 0)
+frame = 2
+
+[node name="Wall6" parent="Wall" unique_id=1871479758 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.424301, 0, 0)
+frame = 2
+
+[node name="Wall2" parent="Wall" unique_id=1709238695 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.536652, 0, 0)
+frame = 3
+
+[node name="Wall3" parent="Wall" unique_id=975047020 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.831848, 0, 0)
+frame = 1
+
+[node name="Wall4" parent="Wall" unique_id=2028585085 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.42978, 0, 0)
+
+[node name="Wall5" parent="Wall" unique_id=1410602773 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.405487, 0, 0)
+frame = 1
+
+[node name="Wall8" parent="Wall" unique_id=1194452770 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -41.987534, 0, 0)
+frame = 1
+
+[node name="Wall9" parent="Wall" unique_id=1733937377 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.625397, 0, 0)
+frame = 1
+
+[node name="Wall10" parent="Wall" unique_id=109859210 instance=ExtResource("4_8cg42")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -7.548213, 0, -17.293167)
+frame = 2
+
+[node name="Van" parent="." unique_id=1452757428 instance=ExtResource("5_scxgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.509406, 1.9073486e-06, 1.0659714)
+
+[node name="Van2" parent="." unique_id=649329205 instance=ExtResource("5_scxgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.7282133, 0, -7.964348)
+
+[node name="Van3" parent="." unique_id=1955340443 instance=ExtResource("5_scxgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.329441, 0, -3.5534172)
+
+[node name="Turret4" parent="." unique_id=1264253318 instance=ExtResource("2_hudlv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.066456, -1.9073486e-06, 7.4722643)
+
+[node name="Turret5" parent="." unique_id=61980509 instance=ExtResource("2_hudlv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.899676, 1.9073486e-06, 7.074337)
+
+[node name="Turret6" parent="." unique_id=1439463625 instance=ExtResource("2_hudlv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.6132383, 0, 20.32446)
+
+[node name="Van4" parent="." unique_id=1313453173 instance=ExtResource("5_scxgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8502555, 0, -8.659935)
+
+[node name="Van5" parent="." unique_id=1383923734 instance=ExtResource("5_scxgl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.204174, 1.9073486e-06, 3.246582)
+
+[node name="PlayerSpawn" parent="." unique_id=2107161125 instance=ExtResource("6_1bs6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23673391, 0, 35.510612)

@@ -11,7 +11,7 @@ func _on_restart_button_pressed() -> void:
 	# Stay paused: the scene change is deferred to the end of the frame, and
 	# unpausing now would let the old world run (and kill the player again)
 	# before the swap happens. The new scene unpauses itself in hud.gd.
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")
 
 func _on_main_menu_button_pressed() -> void:
 	get_tree().change_scene_to_file(main_menu_path)

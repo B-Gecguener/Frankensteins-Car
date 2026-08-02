@@ -163,15 +163,6 @@ transform = Transform3D(-0.29, 0, 2.5352605e-08, 0, 0.29, 0, -2.5352605e-08, 0, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10538745, 0.9975586, 0.2101388)
 shape = SubResource("CylinderShape3D_pqkk7")
 
-[node name="Node3D" type="Node3D" parent="." unique_id=439993425]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.946099, 0)
-top_level = true
-
-[node name="Camera3D" type="Camera3D" parent="Node3D" unique_id=1970741552]
-transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 7.745)
-projection = 1
-size = 16.887
-
 [node name="Hurtbox" parent="." unique_id=1244123534 instance=ExtResource("3_o1vxq")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Hurtbox" unique_id=1808666978]

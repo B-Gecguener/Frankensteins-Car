@@ -1,6 +1,5 @@
 extends Turret
 
-@onready var hurt_box: HurtBox = $HurtBox
 @onready var explosion_sprite: AnimatedSprite3D = $ExplosionSprite
 
 # Called when the node enters the scene tree for the first time.
