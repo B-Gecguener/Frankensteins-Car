@@ -83,7 +83,7 @@ func fire() -> void:
 	can_fire = false
 	var reload_time: float = fire_rate
 	for i in range(gun_tier):
-		reload_time /= 0.8
+		reload_time *= 0.8
 	get_tree().create_timer(reload_time).timeout.connect(reload)
 
 func reload() -> void:
