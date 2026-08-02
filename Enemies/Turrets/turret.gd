@@ -7,6 +7,8 @@ class_name Turret
 @onready var turret: Node3D = $Cannon
 
 var pickup: PackedScene = load("res://Objects/pickup.tscn")
+var audio_player: AudioStreamPlayer = AudioStreamPlayer.new()
+var kaboom: AudioStream = load("res://Sound/Kaboom.mp3")
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 var ruined: bool = false
@@ -15,6 +17,8 @@ var velocity: Vector3 = Vector3(0,-1,0);
 
 # Called when the node edefault_2nters the scene tree for the first time.
 func _ready() -> void:
+	add_child(audio_player)
+	audio_player.stream = kaboom
 	#explo_sprite.animation_finished.connect(ruin_turret)
 	hurtbox.died.connect(explode)
 	#get_tree().create_timer(3.0).timeout.connect(explode)
@@ -22,6 +26,7 @@ func _ready() -> void:
 
 func explode():
 	if not ruined:
+		audio_player.play()
 		turret.active = false
 		ruined = true
 		explo_sprite.play("explosion")
