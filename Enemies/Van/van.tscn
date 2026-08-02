@@ -101,11 +101,12 @@ animations = [{
 [node name="Van" type="Node3D" unique_id=1452757428]
 script = ExtResource("1_0sr5r")
 
-[node name="TurretSprite" type="AnimatedSprite3D" parent="." unique_id=1478910900]
+[node name="TurretSprite" type="AnimatedSprite3D" parent="." unique_id=1478910900 node_paths=PackedStringArray("hurtbox")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 1.1911789, 0)
 sprite_frames = SubResource("SpriteFrames_ryoya")
 animation = &"ruined"
 script = ExtResource("3_wfelm")
+hurtbox = NodePath("../Hurtbox")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=769924014]
 
