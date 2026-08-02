@@ -135,8 +135,47 @@ frame = 1
 
 [node name="Wall14" parent="." unique_id=952194200 instance=ExtResource("5_xhd4d")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -62.469357, -0.2757759, -22.332294)
-frame = 1
 
 [node name="Wall15" parent="." unique_id=666231929 instance=ExtResource("5_xhd4d")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -62.469357, -0.2757759, -8.591099)
+frame = 2
+
+[node name="Wall16" parent="." unique_id=60530070 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -62.469357, -0.2757759, 6.413887)
+
+[node name="Wall17" parent="." unique_id=1187687965 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -62.469357, -0.2757759, 21.088415)
+frame = 1
+
+[node name="Wall18" parent="." unique_id=1515980308 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, -35.98415)
+
+[node name="Wall19" parent="." unique_id=55667738 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, -22.332294)
+frame = 1
+
+[node name="Wall20" parent="." unique_id=1478676104 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, -8.591099)
+frame = 2
+
+[node name="Wall21" parent="." unique_id=254213795 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, 6.413887)
+
+[node name="Wall22" parent="." unique_id=1383957728 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, 21.088415)
+frame = 1
+
+[node name="Wall23" parent="." unique_id=1198247037 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -62.469357, -0.2757759, 36.51468)
+frame = 1
+
+[node name="Wall24" parent="." unique_id=694834170 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -62.469357, -0.2757759, 53.010094)
+frame = 1
+
+[node name="Wall25" parent="." unique_id=946604257 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, 37.892445)
+
+[node name="Wall26" parent="." unique_id=19727465 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, 52.56697)
 frame = 1
