@@ -5,6 +5,7 @@ extends Node3D
 
 @onready var detection_area: Area3D = $Area3D
 @onready var muzzle: Node3D = $Waffe1/Muzzle
+@onready var big_shoot: AudioStreamPlayer = $SmallShoot
 
 var projectile: PackedScene = load("res://Objects/projectileVan.tscn")
 
@@ -45,13 +46,15 @@ func _physics_process(delta: float) -> void:
 	
 			if loaded:
 					fire()
-					
 		yaw_speed = move_toward(yaw_speed, desired_yaw_speed, yaw_accel * delta)
 		turret.rotation.y = wrapf(turret.rotation.y + yaw_speed * delta, -PI, PI)
 
 func fire() -> void:
 	var bullet: Projectile = projectile.instantiate()
 	add_child(bullet)
+	if big_shoot:
+		big_shoot.pitch_scale = rng.randf_range(0.3,4);
+		big_shoot.play()
 	bullet.flight_vector = (-muzzle.global_basis.z).normalized().rotated(Vector3(0,1,0),rng.randf_range(-0.2,0.2))
 	bullet.global_position = muzzle.global_position
 	loaded = false

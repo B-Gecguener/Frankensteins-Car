@@ -39,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://6bpexjjo1dmy" path="res://Assets/Shield/car/shield_car_030.png" id="37_pwnov"]
 [ext_resource type="AudioStream" uid="uid://dkwcitnt7t38v" path="res://Sound/Bzzzzz.mp3" id="38_0bx5e"]
 [ext_resource type="AudioStream" uid="uid://dj5mvclas2jse" path="res://Sound/Wroooom.mp3" id="39_dq0bv"]
+[ext_resource type="AudioStream" uid="uid://days1urr7p6ns" path="res://Sound/Shoot_Small.mp3" id="40_dq0bv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ryoya"]
 animations = [{
@@ -208,3 +209,7 @@ volume_db = -10.048
 [node name="Wroom" type="AudioStreamPlayer" parent="." unique_id=116862481]
 stream = ExtResource("39_dq0bv")
 parameters/looping = false
+
+[node name="SmallShoot" type="AudioStreamPlayer" parent="." unique_id=2048379662]
+stream = ExtResource("40_dq0bv")
+volume_db = -10.0

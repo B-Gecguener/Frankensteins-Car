@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b81cpkfof1bdu" path="res://Enemies/cannon.gd" id="1_gvh84"]
 [ext_resource type="PackedScene" uid="uid://bugtqdunr0uwb" path="res://Assets/turret.blend" id="2_xpqih"]
 [ext_resource type="PackedScene" uid="uid://dyoa380ej5ljk" path="res://Assets/cannon.blend" id="3_u6ywg"]
+[ext_resource type="AudioStream" uid="uid://ro2cas60ux3j" path="res://Sound/Shot_Big.mp3" id="4_xpqih"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_c5apd"]
 height = 50.034
@@ -28,6 +29,9 @@ monitorable = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1941810749]
 transform = Transform3D(0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, -12.721968, 0)
 shape = SubResource("CylinderShape3D_c5apd")
+
+[node name="BigShoot" type="AudioStreamPlayer" parent="." unique_id=1089262306]
+stream = ExtResource("4_xpqih")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

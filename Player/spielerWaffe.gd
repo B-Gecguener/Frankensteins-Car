@@ -2,6 +2,7 @@ extends Node3D
 class_name Gun
 
 var gun_tier: int = 0
+var rng: RandomNumberGenerator = RandomNumberGenerator.new()
 
 @export var joy_deadzone: float = 0.2
 @export var invert_x: bool = false
@@ -13,6 +14,7 @@ var gun_tier: int = 0
 @onready var mount: Node3D = get_parent()
 @onready var muzzle: Node3D = $Muzzle
 @onready var hurtbox: HurtBox = mount.get_node("Hurtbox")
+@onready var small_shoot: AudioStreamPlayer = $"../SmallShoot"
 
 var projectile_scene: PackedScene = load("res://Objects/projectileVan.tscn")
 
@@ -73,6 +75,8 @@ func _aim_at_mouse() -> void:
 	held_world_yaw = atan2(-to_point.x, -to_point.z)
 
 func fire() -> void:
+	small_shoot.pitch_scale = rng.randf_range(0.3,4)
+	small_shoot.play()
 	var bullet: Projectile = projectile_scene.instantiate()
 	bullet.shooter = hurtbox   # so the shot can't damage the player who fired it
 	add_child(bullet)
