@@ -4,7 +4,8 @@ extends AnimatedSprite3D
 var timer: Timer = Timer.new()
 
 func _ready() -> void:
-	timer.wait_time = 0.2
+	add_child(timer)
+	timer.wait_time = 0.05
 	if hurtbox:
 		hurtbox.damaged.connect(blink)
 	timer.timeout.connect(reset)
