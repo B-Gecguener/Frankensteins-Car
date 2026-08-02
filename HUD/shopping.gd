@@ -1,21 +1,11 @@
-extends Control
+extends CanvasLayer
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
+@onready var button_schild: Sprite2D = $Control/TankstelleSchildButton
+@onready var button_schild_2: Sprite2D = $Control/TankstelleSchildButton2
 
 
 func _on_button_pressed() -> void:
-	$TankstelleSchildButton.visible = true
-
-
+	button_schild.visible = true
 
 func _on_button_2_pressed() -> void:
-	pass # Replace with function body.
+	button_schild_2.visible = true

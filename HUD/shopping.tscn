@@ -5,17 +5,21 @@
 [ext_resource type="Texture2D" uid="uid://c15xcwc8iqeoj" path="res://Assets/HUD/tankstelle_Schild_Button.png" id="3_8s8qf"]
 
 [node name="Shopping" type="CanvasLayer" unique_id=107421126]
+layer = 2
 script = ExtResource("1_la2o5")
 
 [node name="Control" type="Control" parent="." unique_id=520464275]
+z_index = -1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="Button" type="Button" parent="Control" unique_id=1485399835]
+z_index = 1
 layout_mode = 0
 offset_left = 1055.0
 offset_top = 378.0
@@ -25,6 +29,7 @@ flat = true
 metadata/_edit_lock_ = true
 
 [node name="Button2" type="Button" parent="Control" unique_id=639605686]
+z_index = 1
 layout_mode = 0
 offset_left = 541.0
 offset_top = 377.0

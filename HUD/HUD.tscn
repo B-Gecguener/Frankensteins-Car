@@ -16,15 +16,15 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -140.0
-offset_top = 61.0
-offset_right = -140.0
-offset_bottom = 61.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 2.0
+offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainHudLinks" type="Sprite2D" parent="Control" unique_id=2029083118]
-position = Vector2(859.0001, 614.00006)
+position = Vector2(715.00006, 678.0001)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_amwvk")
 
@@ -43,7 +43,6 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/fill = SubResource("StyleBoxFlat_67f0n")
 step = 0.1
-show_percentage = false
 
 [node name="ColorRect" type="ColorRect" parent="Control/MainHudLinks" unique_id=1238137502]
 z_index = -2
@@ -54,8 +53,25 @@ offset_bottom = 499.99997
 color = Color(0.44313726, 0.45490196, 0.3764706, 1)
 
 [node name="MainHudRechts" type="Sprite2D" parent="Control" unique_id=1089915539]
-position = Vector2(1102, 484)
+position = Vector2(958, 540)
 texture = ExtResource("3_aa5tu")
+
+[node name="scrap_label" type="Label" parent="Control/MainHudRechts" unique_id=388734657]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -212.0
+offset_top = -642.0
+offset_right = -124.0
+offset_bottom = -600.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.23808536, 0.2446942, 0.2016396, 1)
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=101904174]
 layout_mode = 1
@@ -70,24 +86,6 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="scrap_label" type="Label" parent="Control" unique_id=388734657]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 890.0
-offset_top = -158.0
-offset_right = 978.0
-offset_bottom = -116.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(0.23808536, 0.2446942, 0.2016396, 1)
-theme_override_font_sizes/font_size = 30
-text = "0"
-horizontal_alignment = 1
 
 [node name="DeathScreen" type="Control" parent="." unique_id=1664546084]
 process_mode = 3
