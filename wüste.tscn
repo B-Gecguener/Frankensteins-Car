@@ -15,6 +15,9 @@
 background_color = Color(1, 0.8117647, 0.47058824, 1)
 background_energy_multiplier = 11.45
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_j3xfy"]
+size = Vector3(113.064804, 7.287018, 1.8974609)
+
 [node name="Wüste" type="Node3D" unique_id=1567783565]
 
 [node name="Boden" type="Sprite3D" parent="." unique_id=886401118]
@@ -178,4 +181,34 @@ transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81
 
 [node name="Wall26" parent="." unique_id=19727465 instance=ExtResource("5_xhd4d")]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, 52.56697)
+frame = 1
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=170223519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 30.36945)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1149715409]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6499863, 2.7881317, 71.855515)
+shape = SubResource("BoxShape3D_j3xfy")
+
+[node name="Wall27" parent="." unique_id=1704950232 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -62.469357, -0.2757759, 68.92434)
+frame = 1
+
+[node name="Wall28" parent="." unique_id=1013243736 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -62.469357, -0.2757759, 84.3506)
+frame = 1
+
+[node name="Wall29" parent="." unique_id=1198211124 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, -62.469357, -0.2757759, 100.846016)
+frame = 1
+
+[node name="Wall30" parent="." unique_id=1334275480 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, 69.283264)
+frame = 1
+
+[node name="Wall31" parent="." unique_id=1124602076 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, 86.087296)
+
+[node name="Wall32" parent="." unique_id=1774644192 instance=ExtResource("5_xhd4d")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 40.870853, -0.2757759, 100.76182)
 frame = 1
