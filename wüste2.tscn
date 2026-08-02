@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bjosybyu6hsgb" path="res://Enemies/Turrets/turret.tscn" id="2_hudlv"]
 [ext_resource type="PackedScene" uid="uid://dpj4eult6r2dy" path="res://Objects/wall.tscn" id="4_8cg42"]
 [ext_resource type="PackedScene" uid="uid://cm4ielt7asvhc" path="res://Enemies/Van/van.tscn" id="5_scxgl"]
+[ext_resource type="AudioStream" uid="uid://d18oq1hp6iv3p" path="res://Sound/The Prodigy - Invaders Must Die (Official Video) 4.mp3" id="6_0q31x"]
 [ext_resource type="PackedScene" uid="uid://w0rosc2k8i3t" path="res://Player/player_spawn.tscn" id="6_1bs6b"]
 
 [sub_resource type="Environment" id="Environment_ryoya"]
@@ -101,3 +102,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.204174, 1.9073486e-06, 3.2
 
 [node name="PlayerSpawn" parent="." unique_id=2107161125 instance=ExtResource("6_1bs6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23673391, 0, 35.510612)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1694067328]
+stream = ExtResource("6_0q31x")
+autoplay = true
+parameters/looping = false
