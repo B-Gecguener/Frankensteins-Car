@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://s6nbf74pj8n"]
 
+[ext_resource type="Texture2D" uid="uid://7slp804r53ab" path="res://Assets/Title.png" id="2_3w4mj"]
 [ext_resource type="Script" uid="uid://bli8ivleupuoe" path="res://MainMenu/main_menu.gd" id="2_script"]
 
 [node name="MainMenu" type="Control" unique_id=1987520369]
@@ -11,20 +12,28 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_script")
 
-[node name="Background" type="ColorRect" parent="." unique_id=360326424]
+[node name="Control" type="Control" parent="." unique_id=634246740]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
 grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.8117647, 0.47058824, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Control" unique_id=1138222113]
+position = Vector2(-946, 7)
+texture = ExtResource("2_3w4mj")
+centered = false
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1076715041]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = 739.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -34,6 +43,7 @@ theme_override_constants/separation = 28
 alignment = 1
 
 [node name="TitleLabel" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1724479236]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 48
