@@ -1,13 +1,14 @@
 extends CharacterBody3D
 class_name Player_1
 
+
 @export var engine_power := 5.0
 @export var braking_power := 45.0
 
 @export var max_speed := 18.0
 @export var max_speed_reverse := 10.0
 
-@export var steering_speed := 0.7     # Wie schnell das Auto lenkt
+@export var steering_speed := 0.7
 @export var friction := 10.0
 @export var drag := 0.15
 
@@ -15,6 +16,7 @@ class_name Player_1
 
 @onready var collection_area: CollectionArea = $CollectionArea
 @onready var hurtbox: HurtBox = $Hurtbox
+@onready var gun: Gun = $Waffe1
 @onready var sprite: AnimatedSprite3D = $Node3D/AnimatedSprite3D
 
 var throttle := 0.0

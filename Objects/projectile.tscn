@@ -23,7 +23,7 @@ script = ExtResource("1_v73ce")
 mesh = SubResource("SphereMesh_ryoya")
 
 [node name="HitBox" parent="." unique_id=469772956 instance=ExtResource("1_7wvss")]
-damage = 25.0
+damage = 20.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox" unique_id=1404704840]
 shape = SubResource("SphereShape3D_ryoya")

@@ -1,10 +1,13 @@
 extends Node3D
+class_name Gun
 
 ## Aims the turret. With a gamepad, the right stick sets a WORLD-space
 ## direction that's held until moved again - the turret does not turn with
 ## the car. With mouse + keyboard, the turret continuously points toward
 ## wherever the mouse cursor is in the world instead. Whichever device
 ## produced input most recently controls the aim.
+
+var gun_tier: int = 0
 
 @export var joy_deadzone: float = 0.2
 @export var invert_x: bool = false   # flip if left/right feels backwards (gamepad)
@@ -85,9 +88,16 @@ func fire() -> void:
 	add_child(bullet)
 	bullet.flight_vector = (muzzle.global_position - global_position).normalized()
 	bullet.global_position = muzzle.global_position
+	bullet.hit_box.damage = 10 + gun_tier * 5
 
 	can_fire = false
-	get_tree().create_timer(fire_rate).timeout.connect(reload)
+	var reload_time: float = fire_rate
+	for i in range(gun_tier):
+		reload_time /= 0.8
+	get_tree().create_timer(reload_time).timeout.connect(reload)
 
 func reload() -> void:
 	can_fire = true
+
+func upgrade():
+	gun_tier += 1;
