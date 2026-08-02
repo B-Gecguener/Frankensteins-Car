@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://g8rejqy64bd4" path="res://Assets/pillar broken/container fire/container_fire_007.png" id="14_q1wts"]
 [ext_resource type="Texture2D" uid="uid://bwaft04xsbh7e" path="res://Assets/pillar broken/container fire/container_fire_009.png" id="15_infd2"]
 [ext_resource type="Texture2D" uid="uid://bch3tsyldfevo" path="res://Assets/pillar animations/Pillar_explosion_010.png" id="15_prl2m"]
+[ext_resource type="Script" uid="uid://cwakvnuxbvey5" path="res://Enemies/Turrets/enemy_sprite.gd" id="16_nt5w3"]
 [ext_resource type="Texture2D" uid="uid://viwen2ugl4io" path="res://Assets/pillar animations/Pillar_explosion_012.png" id="16_x0ujf"]
 [ext_resource type="Texture2D" uid="uid://utf40tt6bh4o" path="res://Assets/pillar animations/Pillar_explosion_014.png" id="17_2abfd"]
 [ext_resource type="Texture2D" uid="uid://bdqo83ts0ju8w" path="res://Assets/pillar animations/Pillar_explosion_016.png" id="18_hceep"]
@@ -147,12 +148,14 @@ animations = [{
 [node name="Turret" type="Node3D" unique_id=1454328288]
 script = ExtResource("1_4f8jm")
 
-[node name="TurretSprite" type="AnimatedSprite3D" parent="." unique_id=1195862395]
+[node name="TurretSprite" type="AnimatedSprite3D" parent="." unique_id=1195862395 node_paths=PackedStringArray("hurtbox")]
 transform = Transform3D(-1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0.012, 1.635, 0.314)
 pixel_size = 0.011
 sprite_frames = SubResource("SpriteFrames_ryoya")
 autoplay = "default"
 frame_progress = 0.8553514
+script = ExtResource("16_nt5w3")
+hurtbox = NodePath("../Hurtbox")
 
 [node name="Cannon" parent="." unique_id=921670640 instance=ExtResource("2_o1vxq")]
 transform = Transform3D(-0.29, 0, 2.5352605e-08, 0, 0.29, 0, -2.5352605e-08, 0, -0.29, 0, 6.4, 0)
