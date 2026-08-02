@@ -1,20 +1,14 @@
 extends Node3D
 class_name Gun
 
-## Aims the turret. With a gamepad, the right stick sets a WORLD-space
-## direction that's held until moved again - the turret does not turn with
-## the car. With mouse + keyboard, the turret continuously points toward
-## wherever the mouse cursor is in the world instead. Whichever device
-## produced input most recently controls the aim.
-
 var gun_tier: int = 0
 
 @export var joy_deadzone: float = 0.2
-@export var invert_x: bool = false   # flip if left/right feels backwards (gamepad)
-@export var invert_y: bool = false   # flip if up/down feels backwards (gamepad)
+@export var invert_x: bool = false
+@export var invert_y: bool = false
 
 @export_group("Shooting")
-@export var fire_rate: float = 0.25   # seconds between shots
+@export var fire_rate: float = 0.25
 
 @onready var mount: Node3D = get_parent()
 @onready var muzzle: Node3D = $Muzzle
@@ -24,13 +18,12 @@ var projectile_scene: PackedScene = load("res://Objects/projectileVan.tscn")
 
 var held_world_yaw: float = 0.0
 var can_fire: bool = true
-var aim_with_mouse: bool = true   # which device last provided aim input
+var aim_with_mouse: bool = true  
 
 func _ready() -> void:
 	held_world_yaw = mount.global_rotation.y
 
 func _input(event: InputEvent) -> void:
-	# Whichever device the player actually moves takes over aiming.
 	if event is InputEventMouseMotion:
 		aim_with_mouse = true
 	elif event is InputEventJoypadMotion \
@@ -51,8 +44,6 @@ func _physics_process(_delta: float) -> void:
 			held_world_yaw = atan2(-stick.x, -stick.y)
 		# else: stick is centered, keep holding the last aimed direction.
 
-	# Continuously cancel the car's own heading so the turret keeps pointing
-	# at held_world_yaw regardless of which way the car turns.
 	rotation.y = wrapf(held_world_yaw - mount.global_rotation.y, -PI, PI)
 
 	if Input.is_action_pressed("shoot") and can_fire:
@@ -67,7 +58,6 @@ func _aim_at_mouse() -> void:
 	var ray_origin := cam.project_ray_origin(mouse_pos)
 	var ray_dir := cam.project_ray_normal(mouse_pos)
 
-	# Intersect the mouse ray with the horizontal plane at the weapon's height.
 	if absf(ray_dir.y) < 0.0001:
 		return
 	var t := (mount.global_position.y - ray_origin.y) / ray_dir.y

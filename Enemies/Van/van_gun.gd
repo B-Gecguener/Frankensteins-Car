@@ -9,9 +9,9 @@ extends Node3D
 var projectile: PackedScene = load("res://Objects/projectileVan.tscn")
 
 @export_group("Aiming")
-@export var max_yaw_speed: float = 7       # rad/s, top traverse speed
-@export var yaw_accel: float = 3            # rad/sÂ², lower = more momentum
-@export var tracking_gain: float = 8.0       # how aggressively it closes the error
+@export var max_yaw_speed: float = 7       
+@export var yaw_accel: float = 3           
+@export var tracking_gain: float = 8.0     
 
 var yaw_speed: float = 0.0
 var target: Vector3 = Vector3.ZERO
@@ -46,7 +46,6 @@ func _physics_process(delta: float) -> void:
 			if loaded:
 					fire()
 					
-		# momentum: angular velocity can only change at a limited rate
 		yaw_speed = move_toward(yaw_speed, desired_yaw_speed, yaw_accel * delta)
 		turret.rotation.y = wrapf(turret.rotation.y + yaw_speed * delta, -PI, PI)
 
@@ -62,7 +61,6 @@ func reload() -> void:
 	loaded = true
 
 func _target_yaw(point: Vector3) -> float:
-	# convert into the turret's parent space so the mount's own rotation is accounted for
 	var local: Vector3 = turret.get_parent().to_local(point)
 	return atan2(-local.x, -local.z)
 

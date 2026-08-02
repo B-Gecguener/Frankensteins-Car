@@ -3,7 +3,7 @@ class_name Projectile
 
 @export var speed: float = 30.0
 var flight_vector: Vector3 = Vector3()
-var shooter: HurtBox = null   # set by whoever fired this, before adding it to the tree
+var shooter: HurtBox = null 
 
 var impact_ani: PackedScene = load("res://Objects/impact.tscn")
 var timer: SceneTreeTimer

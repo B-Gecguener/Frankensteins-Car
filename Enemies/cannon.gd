@@ -1,8 +1,8 @@
 extends Node3D
 
 @export var car: CharacterBody3D
-@export var turret: Node3D   # yaws around Y
-@export var cannon: Node3D   # pitches around X, child of turret
+@export var turret: Node3D   
+@export var cannon: Node3D   
 
 @onready var detection_area: Area3D = $Area3D
 @onready var muzzle: Node3D = $turret/cannon/Muzzle
@@ -10,11 +10,11 @@ extends Node3D
 var projectile: PackedScene = load("res://Objects/projectile.tscn")
 
 @export_group("Aiming")
-@export var max_yaw_speed: float = 7       # rad/s, top traverse speed
+@export var max_yaw_speed: float = 7       
 @export var max_pitch_speed: float = 0.8
-@export var yaw_accel: float = 10            # rad/sÂ², lower = more momentum
+@export var yaw_accel: float = 10            
 @export var pitch_accel: float = 3
-@export var tracking_gain: float = 8.0       # how aggressively it closes the error
+@export var tracking_gain: float = 8.0      
 
 var yaw_speed: float = 0.0
 var pitch_speed: float = 0.0
@@ -52,7 +52,6 @@ func _physics_process(delta: float) -> void:
 			if loaded:
 					fire()
 					
-		# momentum: angular velocity can only change at a limited rate
 		yaw_speed = move_toward(yaw_speed, desired_yaw_speed, yaw_accel * delta)
 		pitch_speed = move_toward(pitch_speed, desired_pitch_speed, pitch_accel * delta)
 
@@ -73,7 +72,6 @@ func reload() -> void:
 	loaded = true
 
 func _target_yaw(point: Vector3) -> float:
-	# convert into the turret's parent space so the mount's own rotation is accounted for
 	var local: Vector3 = turret.get_parent().to_local(point)
 	return atan2(-local.x, -local.z)
 

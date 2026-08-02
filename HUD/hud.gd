@@ -21,7 +21,6 @@ func _on_health_changed(current: float, max: float) -> void:
 	energy_health.value = current
 
 func _on_player_died() -> void:
-	# died can fire more than once if further damage lands in the same frame.
 	if is_dead:
 		return
 	is_dead = true

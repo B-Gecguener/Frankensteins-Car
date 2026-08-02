@@ -1,16 +1,25 @@
 extends Area3D
 
-@export var popup: Control
+const SHOPPING_SCENE := preload("res://HUD/shopping.tscn")
+
+var _popup: CanvasLayer = null
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
-	popup.hide() # make sure it starts hidden
 
 func _on_body_entered(body: Node3D) -> void:
-	if body.is_in_group("player"):
-		popup.show()
+	if not body is Player_1:
+		return
+	if _popup != null:
+		return
+	_popup = SHOPPING_SCENE.instantiate()
+	add_child(_popup)
 
 func _on_body_exited(body: Node3D) -> void:
-	if body.is_in_group("player"):
-		popup.hide()
+	if not body is Player_1:
+		return
+	if _popup == null:
+		return
+	_popup.queue_free()
+	_popup = null
