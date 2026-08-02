@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cicelyxc2t5ks" path="res://Objects/LevelGate.tscn" id="7_gwk0m"]
 [ext_resource type="PackedScene" uid="uid://bgyjpujfxegyp" path="res://wüste2.tscn" id="8_1lwex"]
 [ext_resource type="AudioStream" uid="uid://d18oq1hp6iv3p" path="res://Sound/The Prodigy - Invaders Must Die (Official Video) 4.mp3" id="9_1lwex"]
+[ext_resource type="PackedScene" uid="uid://bey1u5ucdp7nk" path="res://Objects/tankstelle.tscn" id="10_j3xfy"]
 
 [sub_resource type="Environment" id="Environment_ryoya"]
 background_color = Color(1, 0.8117647, 0.47058824, 1)
@@ -113,7 +114,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.135329, 0, -39.42609)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.063625, 0, -43.310623)
 
 [node name="PlayerSpawn" parent="." unique_id=2107161125 instance=ExtResource("6_tmyd5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23673391, 0, 35.510612)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23673391, 0, 78.760735)
 
 [node name="LevelGate" parent="." unique_id=129769928 instance=ExtResource("7_gwk0m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9790907, -3.8146973e-06, -49.11982)
@@ -123,3 +124,6 @@ next_level = ExtResource("8_1lwex")
 stream = ExtResource("9_1lwex")
 autoplay = true
 parameters/looping = false
+
+[node name="Tankstelle" parent="." unique_id=1874023473 instance=ExtResource("10_j3xfy")]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 2.1744995, 46.318848)

@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var auto: Player_1 = $".."
 @onready var hurtbox: HurtBox = $"../Hurtbox"  # adjust path
 @onready var scrap_label: Label = $Control/scrap_label
-@onready var energy_health: ProgressBar = $Control/MainHudLinks/energy_progressbar
+@onready var energy_health: ProgressBar = $Control/energy_progressbar
 @onready var death_screen: Control = $DeathScreen
 
 var is_dead: bool = false
@@ -21,6 +21,7 @@ func _on_health_changed(current: float, max: float) -> void:
 	energy_health.value = current
 
 func _on_player_died() -> void:
+	# died can fire more than once if further damage lands in the same frame.
 	if is_dead:
 		return
 	is_dead = true
@@ -30,13 +31,3 @@ func _on_player_died() -> void:
 
 func _process(delta: float) -> void:
 	scrap_label.text = str(auto.scrap)
-	
-var popup: Control
-
-func show_popup() -> void:
-	if popup:
-		popup.show()
-
-func hide_popup() -> void:
-	if popup:
-		popup.hide()

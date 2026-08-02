@@ -3,3 +3,62 @@
 /android/
 export_presets.cfg
 GameExport/Frankensteins Car.exe
+Assets/Batterie.png.import
+Assets/FSC_tilemap.png.import
+Assets/icon.svg.import
+Assets/IMG_2600.png.import
+Assets/Pillar.png.import
+Assets/Scrap.png.import
+Assets/walls_test.png.import
+Assets/WüstenBoden.png.import
+Assets/bullets/bullet hits/bullet hit001.png.import
+Assets/bullets/bullet hits/bullet hit002.png.import
+Assets/bullets/bullet hits/bullet hit003.png.import
+Assets/bullets/bullet hits/bullet hit004.png.import
+Assets/bullets/bullet hits/bullet hit005.png.import
+Assets/bullets/bullet hits/bullet hit006.png.import
+Assets/bullets/bullet hits/bullet hit007.png.import
+Assets/bullets/bullet hits/bullet hit008.png.import
+Assets/bullets/bullet hits/bullet hit009.png.import
+Assets/bullets/bullet hits/bullet hit010.png.import
+Assets/bullets/bullet hits/bullet hit011.png.import
+Assets/bullets/bullet hits/bullet hit012.png.import
+Assets/bullets/bullet hits/bullet hit013.png.import
+Assets/bullets/bullet hits/bullet hit014.png.import
+Assets/Enemy/vanenemy.png.import
+Assets/HUD/Frankensteins car icon.png.import
+Assets/HUD/main_hud_links.png.import
+Assets/HUD/main_hud_rechts.png.import
+Assets/pillar animations/Pillar_explosion_001.png.import
+Assets/pillar broken/background pillar broken.PNG.import
+Assets/pillar broken/foreground pillar broken.PNG.import
+Assets/pillar broken/pillar broken alleine.PNG.import
+Assets/PillarExpl/001.png.import
+Assets/PillarExpl/002.png.import
+Assets/PillarExpl/003.png.import
+Assets/PillarExpl/004.png.import
+Assets/PillarExpl/005.png.import
+Assets/PillarExpl/006.png.import
+Assets/PillarPower/Pillar_1.png.import
+Assets/PillarPower/Pillar_2.png.import
+Assets/PillarPower/Pillar_3.png.import
+Assets/PillarPower/Pillar_4.png.import
+Assets/PillarPower/Pillar_5.png.import
+Assets/PillarPower/Pillar_6.png.import
+Assets/PillarPower/Pillar_7.png.import
+Assets/PillarPower/Pillar_8.png.import
+Assets/random_assets/Battery.png.import
+Assets/random_assets/Scrap.png.import
+Assets/random_assets/Skeletons variations/Sk 1.png.import
+Assets/random_assets/Skeletons variations/Sk 2.png.import
+Assets/random_assets/Skeletons variations/Sk 3.png.import
+Assets/random_assets/Skeletons variations/Sk 4.png.import
+Assets/random_assets/Skeletons variations/Sk 5.png.import
+Assets/Tankstelle/tankstelle_oben.png.import
+Assets/Tankstelle/tankstelle_unten.png.import
+Assets/textures/DefaultMaterial_BaseColor.png.import
+Assets/textures/DefaultMaterial_Normal.png.import
+Assets/textures/DefaultMaterial_Roughness.png.import
+Assets/textures/Material_BaseColor.png.import
+Assets/textures/Material_Normal.png.import
+Assets/textures/Material_Roughness.png.import
