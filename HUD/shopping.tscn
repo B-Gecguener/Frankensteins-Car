@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://fxxqjo8tg5su" path="res://HUD/shopping.gd" id="1_la2o5"]
 [ext_resource type="Texture2D" uid="uid://cfysq27ggb2ae" path="res://Assets/HUD/tankstelle_Schild.png" id="2_ua4ax"]
 [ext_resource type="Texture2D" uid="uid://c15xcwc8iqeoj" path="res://Assets/HUD/tankstelle_Schild_Button.png" id="3_8s8qf"]
+[ext_resource type="AudioStream" uid="uid://clfgvgivj66f0" path="res://Sound/Katsching.mp3" id="4_ua4ax"]
 
 [node name="Shopping" type="CanvasLayer" unique_id=107421126]
 layer = 2
@@ -52,6 +53,9 @@ texture = ExtResource("3_8s8qf")
 visible = false
 position = Vector2(1450, 542)
 texture = ExtResource("3_8s8qf")
+
+[node name="Katsching" type="AudioStreamPlayer" parent="." unique_id=772524532]
+stream = ExtResource("4_ua4ax")
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]

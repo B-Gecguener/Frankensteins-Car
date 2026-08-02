@@ -37,6 +37,8 @@
 [ext_resource type="Texture2D" uid="uid://b4tqd8j4owvr1" path="res://Assets/Shield/car/shield_car_028.png" id="35_7o0ib"]
 [ext_resource type="Texture2D" uid="uid://bxt22iu11qlh8" path="res://Assets/Shield/car/shield_car_029.png" id="36_cfm7t"]
 [ext_resource type="Texture2D" uid="uid://6bpexjjo1dmy" path="res://Assets/Shield/car/shield_car_030.png" id="37_pwnov"]
+[ext_resource type="AudioStream" uid="uid://dkwcitnt7t38v" path="res://Sound/Bzzzzz.mp3" id="38_0bx5e"]
+[ext_resource type="AudioStream" uid="uid://dj5mvclas2jse" path="res://Sound/Wroooom.mp3" id="39_dq0bv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ryoya"]
 animations = [{
@@ -198,3 +200,11 @@ transform = Transform3D(0.725, 0, 0, 0, -3.1690757e-08, -0.725, 0, 0.725, -3.169
 shape = SubResource("CapsuleShape3D_pqkk7")
 
 [node name="CollectionArea" parent="." unique_id=368743815 instance=ExtResource("7_syyyd")]
+
+[node name="Bzzzzz" type="AudioStreamPlayer" parent="." unique_id=1407952015]
+stream = ExtResource("38_0bx5e")
+volume_db = -10.048
+
+[node name="Wroom" type="AudioStreamPlayer" parent="." unique_id=116862481]
+stream = ExtResource("39_dq0bv")
+parameters/looping = false
