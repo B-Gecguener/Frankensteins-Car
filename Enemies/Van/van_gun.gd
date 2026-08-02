@@ -9,9 +9,9 @@ extends Node3D
 var projectile: PackedScene = load("res://Objects/projectileVan.tscn")
 
 @export_group("Aiming")
-@export var max_yaw_speed: float = 7       
-@export var yaw_accel: float = 3           
-@export var tracking_gain: float = 8.0     
+@export var max_yaw_speed: float = 4      # rad/s, top traverse speed
+@export var yaw_accel: float = 5            # rad/sÂ², lower = more momentum
+@export var tracking_gain: float = 8.0       # how aggressively it closes the error
 
 var yaw_speed: float = 0.0
 var target: Vector3 = Vector3.ZERO

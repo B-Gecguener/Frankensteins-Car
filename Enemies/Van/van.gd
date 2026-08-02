@@ -5,6 +5,7 @@ extends Turret
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hurtbox.died.connect(explode)
+	hurtbox.car_battery = 50.0
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
