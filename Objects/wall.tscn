@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dpj4eult6r2dy"]
 
 [ext_resource type="Texture2D" uid="uid://cdundf0ba3m3c" path="res://Assets/walls_test.png" id="1_c13ep"]
+[ext_resource type="Texture2D" uid="uid://doiy56klqpkhh" path="res://Assets/Wände/wand_vorne.png" id="2_it1lo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_it1lo"]
 atlas = ExtResource("1_c13ep")
@@ -18,6 +19,26 @@ region = Rect2(2398, 0, 1199, 1501)
 atlas = ExtResource("1_c13ep")
 region = Rect2(3597, 0, 1199, 1501)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tgt8"]
+atlas = ExtResource("2_it1lo")
+region = Rect2(0, 0, 1201, 1525)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej86i"]
+atlas = ExtResource("2_it1lo")
+region = Rect2(1201, 0, 1201, 1525)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_peydx"]
+atlas = ExtResource("2_it1lo")
+region = Rect2(2402, 0, 1201, 1525)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtydq"]
+atlas = ExtResource("2_it1lo")
+region = Rect2(3603, 0, 1201, 1525)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2vaq"]
+atlas = ExtResource("2_it1lo")
+region = Rect2(0, 1525, 1201, 1525)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_pqkk7"]
 animations = [{
 "frames": [{
@@ -33,9 +54,29 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wfb3f")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tgt8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ej86i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_peydx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtydq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2vaq")
+}],
+"loop": 0,
+"name": &"new_wall",
+"speed": 0.0
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ryoya"]
@@ -45,6 +86,7 @@ size = Vector3(11.243164, 5.5426636, 1)
 transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 0)
 centered = false
 sprite_frames = SubResource("SpriteFrames_pqkk7")
+animation = &"new_wall"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=655541952]
 transform = Transform3D(1, 0, 0, 0, 0.81915206, -0.57357645, 0, 0.57357645, 0.81915206, 5.959079, 1.3452492, 0.06997883)

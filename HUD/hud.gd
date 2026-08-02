@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var auto: Player_1 = $".."
 @onready var hurtbox: HurtBox = $"../Hurtbox"  # adjust path
 @onready var scrap_label: Label = $Control/MainHudRechts/scrap_label
-@onready var energy_health: ProgressBar = $Control/MainHudLinks/energy_progressbar
+@onready var energy_health: ProgressBar = $Control2/MainHudLinks/energy_progressbar
 @onready var death_screen: Control = $DeathScreen
 
 var is_dead: bool = false

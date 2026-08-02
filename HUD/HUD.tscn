@@ -11,24 +11,21 @@ bg_color = Color(0.3547695, 0.69730675, 0.15391639, 1)
 [node name="Hud" type="CanvasLayer" unique_id=240368453]
 script = ExtResource("1_f31rt")
 
-[node name="Control" type="Control" parent="." unique_id=968942746]
+[node name="Control2" type="Control" parent="." unique_id=369356137]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 2
+anchor_top = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 2.0
-offset_bottom = -1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
 
-[node name="MainHudLinks" type="Sprite2D" parent="Control" unique_id=2029083118]
-position = Vector2(715.00006, 678.0001)
+[node name="MainHudLinks" type="Sprite2D" parent="Control2" unique_id=2029083118]
+position = Vector2(717.00006, -362.99988)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_amwvk")
 
-[node name="energy_progressbar" type="ProgressBar" parent="Control/MainHudLinks" unique_id=894754043]
+[node name="energy_progressbar" type="ProgressBar" parent="Control2/MainHudLinks" unique_id=894754043]
 z_index = -1
 anchors_preset = 7
 anchor_left = 0.5
@@ -44,7 +41,7 @@ grow_vertical = 0
 theme_override_styles/fill = SubResource("StyleBoxFlat_67f0n")
 step = 0.1
 
-[node name="ColorRect" type="ColorRect" parent="Control/MainHudLinks" unique_id=1238137502]
+[node name="ColorRect" type="ColorRect" parent="Control2/MainHudLinks" unique_id=1238137502]
 z_index = -2
 offset_left = -917.5002
 offset_top = 436.24997
@@ -52,8 +49,18 @@ offset_right = 51.249695
 offset_bottom = 499.99997
 color = Color(0.44313726, 0.45490196, 0.3764706, 1)
 
+[node name="Control" type="Control" parent="." unique_id=968942746]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
 [node name="MainHudRechts" type="Sprite2D" parent="Control" unique_id=1089915539]
-position = Vector2(958, 540)
+position = Vector2(-963, -542)
 texture = ExtResource("3_aa5tu")
 
 [node name="scrap_label" type="Label" parent="Control/MainHudRechts" unique_id=388734657]
