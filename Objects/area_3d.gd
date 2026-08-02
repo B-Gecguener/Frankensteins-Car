@@ -14,6 +14,7 @@ func _on_body_entered(body: Node3D) -> void:
 	if _popup != null:
 		return
 	_popup = SHOPPING_SCENE.instantiate()
+	_popup.player = body
 	add_child(_popup)
 
 func _on_body_exited(body: Node3D) -> void:
