@@ -20,7 +20,7 @@ var gun_tier: int = 0
 @onready var muzzle: Node3D = $Muzzle
 @onready var hurtbox: HurtBox = mount.get_node("Hurtbox")
 
-var projectile_scene: PackedScene = load("res://Objects/projectile.tscn")
+var projectile_scene: PackedScene = load("res://Objects/projectileVan.tscn")
 
 var held_world_yaw: float = 0.0
 var can_fire: bool = true
