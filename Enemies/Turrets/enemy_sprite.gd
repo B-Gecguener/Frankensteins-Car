@@ -12,7 +12,7 @@ func _ready() -> void:
 
 func blink():
 	print("blink")
-	modulate = Color(1.0, 0.0, 0.0, 1.0)
+	modulate = Color(0.518, 0.518, 0.518, 0.718)
 	timer.start()
 
 func reset():
