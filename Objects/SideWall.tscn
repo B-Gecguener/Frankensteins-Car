@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://dmxhfxwbn0yj2"]
+
+[ext_resource type="Texture2D" uid="uid://cwci4pebc52do" path="res://Assets/Wände/walls_sides_new.png" id="1_jo7r6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb5if"]
+atlas = ExtResource("1_jo7r6")
+region = Rect2(0, 0, 301, 1279)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp6eb"]
+atlas = ExtResource("1_jo7r6")
+region = Rect2(301, 0, 301, 1279)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kndjr"]
+atlas = ExtResource("1_jo7r6")
+region = Rect2(602, 0, 301, 1279)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_snbu8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb5if")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp6eb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kndjr")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 0.0
+}]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_67f0n"]
+size = Vector3(1, 10.209412, 11.097717)
+
+[node name="SideWall" type="AnimatedSprite3D" unique_id=1976239269]
+transform = Transform3D(1, 0, 0, 0, 0.81915206, 0.57357645, 0, -0.57357645, 0.81915206, 0, 0, 0)
+sprite_frames = SubResource("SpriteFrames_snbu8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1032394486]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=921806844]
+transform = Transform3D(1, 0, 0, 0, 0.82276434, -0.5683827, 0, 0.5683827, 0.82276434, 0, -0.18783593, -1.4344788)
+shape = SubResource("BoxShape3D_67f0n")
