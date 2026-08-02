@@ -16,6 +16,7 @@ func _ready() -> void:
 	energy_health.max_value = hurtbox.max_car_battery
 	hurtbox.health_changed.connect(_on_health_changed)
 	hurtbox.died.connect(_on_player_died)
+	HudManager.popup = "res://HUD/shopping.tscn"
 
 func _on_health_changed(current: float, max: float) -> void:
 	energy_health.value = current
@@ -31,3 +32,13 @@ func _on_player_died() -> void:
 
 func _process(delta: float) -> void:
 	scrap_label.text = str(auto.scrap)
+	
+var popup: Control
+
+func show_popup() -> void:
+	if popup:
+		popup.show()
+
+func hide_popup() -> void:
+	if popup:
+		popup.hide()

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://qby6bmrjisxg"]
+
+[ext_resource type="Texture2D" uid="uid://c15xcwc8iqeoj" path="res://Assets/HUD/tankstelle_Schild_Button.png" id="1_pfwwf"]
+[ext_resource type="Script" uid="uid://fxxqjo8tg5su" path="res://HUD/shopping.gd" id="1_ui2m3"]
+[ext_resource type="Texture2D" uid="uid://cfysq27ggb2ae" path="res://Assets/HUD/tankstelle_Schild.png" id="2_ui2m3"]
+
+[node name="Shopping" type="CanvasLayer" unique_id=107421126]
+script = ExtResource("1_ui2m3")
+
+[node name="Control" type="Control" parent="." unique_id=520464275]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control" unique_id=1485399835]
+layout_mode = 0
+offset_left = 1055.0
+offset_top = 378.0
+offset_right = 1433.0
+offset_bottom = 823.0
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="Button2" type="Button" parent="Control" unique_id=639605686]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 377.0
+offset_right = 927.0
+offset_bottom = 829.0
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="TankstelleSchild" type="Sprite2D" parent="Control" unique_id=1161831223]
+position = Vector2(964, 546)
+texture = ExtResource("2_ui2m3")
+metadata/_edit_lock_ = true
+
+[node name="TankstelleSchildButton2" type="Sprite2D" parent="Control" unique_id=111141976]
+visible = false
+position = Vector2(945, 542)
+texture = ExtResource("1_pfwwf")
+
+[node name="TankstelleSchildButton" type="Sprite2D" parent="Control" unique_id=578411502]
+visible = false
+position = Vector2(1450, 542)
+texture = ExtResource("1_pfwwf")
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]
