@@ -1,6 +1,9 @@
 extends CharacterBody3D
 class_name Player_1
 
+@onready var Audio_Bzzz: AudioStreamPlayer = $Bzzzzz
+@onready var Audio_Wroom: AudioStreamPlayer = $Wroom
+
 
 @export var engine_power := 5.0
 @export var braking_power := 45.0
@@ -27,6 +30,7 @@ func _ready() -> void:
 	collection_area.scrap.connect(add_scrap)
 	collection_area.power.connect(add_power)
 	hurtbox.damaged.connect(sprite.stop)
+	hurtbox.damaged.connect(Audio_Bzzz.play)
 	hurtbox.damaged.connect(sprite.play.bind("default"))
 
 func add_scrap(amount: int):
